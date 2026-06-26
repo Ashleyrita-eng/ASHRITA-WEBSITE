@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHRITA - Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://kit.fontawesome.com/cdbf25ccfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="header-actions">
+                    <button class="header-action-btn" onclick="openSavedList('cart')" title="View cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                        <span class="action-count" id="cartCount">0</span>
+                    </button>
+                    <button class="header-action-btn" onclick="openSavedList('likes')" title="View liked products">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Likes</span>
+                        <span class="action-count" id="likesCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                 <img src="ASHRITA LOGO_110321.pdf.png">
+            </a>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="phone-number">
+                    <a href="tel:+254715446134">Call Us 📞 +254 715 446 134</a>
+                </div>
+                 <div class="header-social-wrapper">
+        <span class="header-social-label">Follow Us</span>
+        <div class="header-social">
+            <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Products Section -->
+<div class="section">
+    <div class="container">
+        <h1 class="section-title text-blue">Our Products</h1>
+        <p class="section-subtitle">Complete range of quality animal feeds and agrovet medicines</p>
+
+    <div class="search-section">
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="productSearch" 
+            class="search-input" 
+            placeholder=" Search products by name or category... (e.g., 'fish', 'broiler', 'vitamin')"
+            onkeyup="searchProducts()">
+        <button class="search-clear" onclick="clearSearch()">✕</button>
+    </div>
+    
+    <!-- Search Results Counter -->
+    <div class="search-results-info" id="searchInfo" style="display: none;">
+        <p id="resultsCount">Found <span id="resultNumber">0</span> product(s)</p>
+    </div>
+
+    <!-- No Results Message -->
+    <div class="no-results" id="noResults" style="display: none;">
+        <p>No products found for "<span id="searchTerm"></span>"</p>
+        <p>Try searching with different keywords</p>
+    </div>
+</div>
+
+
+    <!-- Products Section -->
+     <!-- ========================================
+     UPDATED PRODUCTS PAGE - FULL HTML
+     Replace the entire products.html section with this code
+     ======================================== -->
+
+
+     
+        <!-- Product Search Section -->
+       
+        <!-- SEEDS CATEGORY -->
+        <h2 class="category-title blue">SEEDS</h2>
+        <div class="grid" id="seedsGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Hybrid H513', '700', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/h513.png" alt="Hybrid H513"></div>
+                <h3>Hybrid H513</h3>
+                <p>Kenya Seed Company - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 700</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('DK 777', '950', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/deklab DK777.png" alt="DK 777"></div>
+                <h3>DK 777</h3>
+                <p>Dekalb - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 950</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('DK 8031', '850', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/dk8031.png" alt="DK 8031"></div>
+                <h3>DK 8031</h3>
+                <p>Dekalb - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 850</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Aminika H403', '850', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/aminika WH403.png" alt="Aminika H403"></div>
+                <h3>Aminika H403</h3>
+                <p>Kenya Seed Company - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 850</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Aminika 505', '850', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/aminika WH505.png" alt="Aminika 505"></div>
+                <h3>Aminika 505</h3>
+                <p>Kenya Seed Company - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 850</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Tembo', '950', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/SC tembo.png" alt="Tembo"></div>
+                <h3>Tembo</h3>
+                <p>Seed Co. - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 950</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Royal Seeds', '90', 'Available', 'In Stock', '10g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/royal seed.png" alt="Royal Seeds"></div>
+                <h3>Royal Seeds</h3>
+                <p>Kephis - Size: 10g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 90</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('EA Seed (25g)', '120', 'Available', 'In Stock', '25g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/EA seeds 25g.png" alt="EA Seed (25g)"></div>
+                <h3>EA Seed</h3>
+                <p>Kephis - Size: 25g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 120</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('EA Seed (10g)', '100', 'Available', 'In Stock', '10g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/EA seed collards.png" alt="EA Seed (10g)"></div>
+                <h3>EA Seed</h3>
+                <p>Kephis - Size: 10g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Blacknight shadesim', '120', 'Available', 'In Stock', '25g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/black nightshade.png" alt="Blacknight shadesim"></div>
+                <h3>Blacknight Shadesim</h3>
+                <p>Seeds - Size: 25g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 120</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- VITAMINS & SUPPLEMENTS CATEGORY -->
+        <h2 class="category-title red">VITAMINS & SUPPLEMENTS</h2>
+        <div class="grid" id="vitaminsGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Cosvita', '120', 'Available', 'In Stock', '30g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/cosvita 30g.png" alt="Cosvita"></div>
+                <h3>Cosvita</h3>
+                <p>Vitamin Supplement - Size: 30g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 120</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Sidai Poultry (30g)', '130', 'Available', 'In Stock', '30g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/sidai pultry vitamins.png" alt="Sidai Poultry (30g)"></div>
+                <h3>Sidai Poultry</h3>
+                <p>Sidai - Size: 30g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 130</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Sidai Poultry (100g)', '250', 'Available', 'In Stock', '100g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/sidai pultry vitamins.png" alt="Sidai Poultry (100g)"></div>
+                <h3>Sidai Poultry</h3>
+                <p>Sidai - Size: 100g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 250</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Vitamet Chick', '120', 'Available', 'In Stock', '60g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/vitamet chick 50g.png" alt="Vitamet Chick"></div>
+                <h3>Vitamet Chick</h3>
+                <p>Metrovet Kenya Limited - Size: 60g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 120</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Super minovit', '200', 'Available', 'In Stock', '100g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/superminovit.png" alt="Super minovit"></div>
+                <h3>Superminovit</h3>
+                <p>CiBus - Size: 100g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Dawa boost', '100', 'Available', 'In Stock', '30g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/dawa-boost.png" alt="Dawa boost"></div>
+                <h3>Dawa Boost</h3>
+                <p>Health Booster - Size: 30g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('chick start (30gms)', '100', 'Available', 'In Stock', '30gms')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/cibus chick start.png" alt="chick start (30gms)"></div>
+                <h3>Chick Start</h3>
+                <p>Vitamin Supplement - Size: 30gms</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+            
+         <div class="product-card red-border" onclick="showProductDetail('Egocin (25gm)', '200', 'Available', 'In Stock', '25gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/egocin 25g.png" alt="Egocin (25gm)"></div>
+                <h3>Egocin</h3>
+                <p>Antibiotic - Size: 25gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 200</div>
+                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Egocin (100gm)', '350', 'Available', 'In Stock', '100gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/egocin 100g.png" alt="Egocin (100gm)"></div>
+                <h3>Egocin</h3>
+                <p>Antibiotic - Size: 100gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 350</div>
+                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Chick start (100gms)', '150', 'Available', 'In Stock', '100gms')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/cibus chick start.png" alt="Chick start (100gms)"></div>
+                <h3>Chick Start</h3>
+                <p>Vitamin Supplement - Size: 100gms</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+        
+         
+        <!-- ANIMAL FEEDS CATEGORY -->
+        <h2 class="category-title blue">ANIMAL FEEDS</h2>
+        <div class="grid" id="feedsGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Growers', '3400', 'Available', 'In Stock', '50kgs per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/growers mash.png" alt="Growers"></div>
+                <h3>Growers Mash</h3>
+                <p>FUGO - Size: 50kgs per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 3,400</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Layers Mash', '3700', 'Available', 'In Stock', '50kgs per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/layers mash pembe.png" alt="Layers Mash"></div>
+                <h3>Layers Mash</h3>
+                <p>FUGO - Size: 50kgs per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 3,700</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            
+
+            <div class="product-card blue-border" onclick="showProductDetail('Finisher Pellets', '4300', 'Available', 'In Stock', '50kgs per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/finisher pellets.png" alt="Finisher Pellets"></div>
+                <h3>Finisher Pellets</h3>
+                <p>FUGO - Size: 50kgs per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 4,300</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Crumbs', '4500', 'Available', 'In Stock', '50kgs per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/chick mash.jpeg" alt="Crumbs"></div>
+                <h3>Crumbs</h3>
+                <p>FUGO - Size: 50kgs per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 4,500</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dairy Meal Standard', '2700', 'Available', 'In Stock', '50kg per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/dairy meal super.jpeg" alt="Dairy Meal Standard"></div>
+                <h3>Dairy Meal Standard</h3>
+                <p>Pembe Feeds - Size: 50kg per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 2,700</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dairy Super Yield', '3000', 'Available', 'In Stock', '50kg per bag')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/dairy meal super.jpeg" alt="Dairy Super Yield"></div>
+                <h3>Dairy Meal Super Yield</h3>
+                <p>Pembe Feeds - Size: 50kg per bag</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 3,000</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Chick Mash', '100', 'Available', 'In Stock', '50kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/chick mash pembe.png" alt="Chick Mash"></div>
+                <h3>Chick Mash</h3>
+                <p>Poultry Feed - Size: 50kgs</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 4,500</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- FISH FEEDS CATEGORY -->
+        <h2 class="category-title red">FISH FEEDS</h2>
+        <div class="grid" id="fishGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Tilapia Starter', '4500', 'Available', 'In Stock', '25kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/tilapia pre-starter.png" alt="Tilapia Starter"></div>
+                <h3>Tilapia Starter 1mm</h3>
+                <p>For young fish - Size: 25kgs</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 4500</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Tilapia Pregrower', '4000', 'Available', 'In Stock', '25kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/tilapia pre-grower.png" alt="Tilapia Pregrower"></div>
+                <h3>Tilapia Pregrower</h3>
+                <p>Growth phase feed - Size: 25kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 4000</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+      
+            <div class="product-card red-border" onclick="showProductDetail('Tilapia Finisher', '200', 'Available', 'In Stock', '25kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/tilapia finisher high pro 4mm.png" alt="Tilapia Finisher"></div>
+                <h3>Tilapia Finisher</h3>
+                <p>Finishing feed - Size: 25kgs</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 3000</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- INSECTICIDES CATEGORY -->
+        <h2 class="category-title blue">INSECTICIDES</h2>
+        <div class="grid" id="insecticidesGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Tixfix (20ml)', '100', 'Available', 'In Stock', '20ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/tixfix 125EC.png" alt="Tixfix (20ml)"></div>
+                <h3>Tixfix</h3>
+                <p>Insect Control - Size: 20ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Tixfix (40ml)', '200', 'Available', 'In Stock', '40ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/tixfix 125EC box.png" alt="Tixfix (40ml)"></div>
+                <h3>Tixfix</h3>
+                <p>Insect Control - Size: 40ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Duodip (40ml)', '200', 'Available', 'In Stock', '40ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/duodip.png" alt="Duodip (40ml)"></div>
+                <h3>Duodip</h3>
+                <p>Pest Control - Size: 40ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu thrin (100ml)', '270', 'Available', 'In Stock', '100ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/duduthrin 100ml.png" alt="Dudu thrin (100ml)"></div>
+                <h3>Dudu Thrin</h3>
+                <p>Insecticide - Size: 100ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 270</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu thrin (50ml)', '190', 'Available', 'In Stock', '50ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/duduthrin 50ml.png" alt="Dudu thrin (50ml)"></div>
+                <h3>Dudu Thrin</h3>
+                <p>Insecticide - Size: 50ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 190</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Escort', '350', 'Available', 'In Stock', '50ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/escort 50ml.png" alt="Escort"></div>
+                <h3>Escort</h3>
+                <p>Insecticide - Size: 50ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 350</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Triatix', '200', 'Available', 'In Stock', '40ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/triatix.png" alt="Triatix"></div>
+                <h3>Triatix</h3>
+                <p>Insecticide - Size: 40ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dizon 60EC', '350', 'Available', 'In Stock', '100ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/dizon 60EC.png" alt="Dizon 60EC"></div>
+                <h3>Dizon 60EC</h3>
+                <p>Insecticide - Size: 100ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 350</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Grenade', '150', 'Available', 'In Stock', '20ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/grenade.png" alt="Grenade"></div>
+                <h3>Grenade</h3>
+                <p>Insecticide - Size: 20ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu Sevin (50g)', '100', 'Available', 'In Stock', '50g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/sevin dudu 50g.png" alt="Dudu Sevin (50g)"></div>
+                <h3>Dudu Sevin</h3>
+                <p>Sevin Brand - Size: 50g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu sevin (100g)', '150', 'Available', 'In Stock', '100g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/sevin dudu dust 100g.png" alt="Dudu sevin (100g)"></div>
+                <h3>Dudu Sevin</h3>
+                <p>Sevin Brand - Size: 100g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu sevin (200g)', '200', 'Available', 'In Stock', '200g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/sevin dudu 200g.png" alt="Dudu sevin (200g)"></div>
+                <h3>Dudu Sevin</h3>
+                <p>Sevin Brand - Size: 200g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu chali (100g)', '150', 'Available', 'In Stock', '100g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/chali dudu dust 100g.png" alt="Dudu chali (100g)"></div>
+                <h3>Dudu Chali</h3>
+                <p>Chali Brand - Size: 100g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Dudu Chali (200g)', '200', 'Available', 'In Stock', '200g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/chali dudu dust 200g.png" alt="Dudu Chali (200g)"></div>
+                <h3>Dudu Chali</h3>
+                <p>Chali Brand - Size: 200g</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Gradometer (100ml)', '300', 'Available', 'In Stock', '100ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/gradometer 480EC.png" alt="Gradometer (100ml)"></div>
+                <h3>Gradometer</h3>
+                <p>Insecticide - Size: 100ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 300</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Gradometer (50ml)', '200', 'Available', 'In Stock', '50ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/gradometer 50ml.png" alt="Gradometer (50ml)"></div>
+                <h3>Gradometer</h3>
+                <p>Insecticide - Size: 50ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Biosafe', '250', 'Available', 'In Stock', '100ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/bio safe 100ml.png" alt="Biosafe"></div>
+                <h3>Biosafe</h3>
+                <p>Insecticide - Size: 100ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 250</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+       
+
+        <!-- HERBICIDES CATEGORY -->
+        <h2 class="category-title blue">HERBICIDES</h2>
+        <div class="grid" id="herbicidesGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Kausha', '200', 'Available', 'In Stock', '200ml')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/kausha 200ml.png" alt="Kausha"></div>
+                <h3>Kausha</h3>
+                <p>Kenagro Suppliers - Size: 200ml</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 200</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Round up 360K', '1000', 'Available', 'In Stock', '1 Litre')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/round uo 360.png" alt="Round up 360K"></div>
+                <h3>Round up 360K</h3>
+                <p>Herbicide - Size: 1 Litre</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 1,000</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- ANTIBIOTICS & MEDICINES CATEGORY -->
+        <h2 class="category-title red">ANTIBIOTICS & MEDICINES</h2>
+        <div class="grid" id="antibioticsGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Vitamin Neoxy (50g)', '170', 'Available', 'In Stock', '50g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/neoxy-vitamin.png" alt="Vitamin Neoxy (50g)"></div>
+                <h3>Vitamin Neoxy</h3>
+                <p>Metrovet Kenya Ltd. - Size: 50g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 170</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+<div class="product-card red-border" onclick="showProductDetail('Nefluk 10%', '320', 'Available', 'In Stock', '125ml')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/nefluk 10 bottle.png" alt="Nefluk 10%"></div>
+    <h3>Nefluk 10%</h3>
+    <p>CKL Company - Dewormer - Size: 125ml</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 320</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Nefluk 2.5%', '280', 'Available', 'In Stock', '125ml')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/nefluk 2.5 bottle.png" alt="Nefluk 2.5%"></div>
+    <h3>Nefluk 2.5%</h3>
+    <p>CKL Company - Dewormer - Size: 125ml</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 280</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Livergenplus (100ml)', '250', 'Available', 'In Stock', '100ml')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/livergen 100ml bottle.png" alt="Livergenplus (100ml)"></div>
+    <h3>Livergenplus</h3>
+    <p>Highchem - Size: 100ml</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 250</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Livergenplus (250ml)', '420', 'Available', 'In Stock', '250ml')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/livergen 250ml bottle.png" alt="Livergenplus (250ml)"></div>
+    <h3>Livergenplus</h3>
+    <p>Highchem - Size: 250ml</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 420</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Livergenplus (1L)', '800', 'Available', 'In Stock', '1L')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/livergen 1L.png" alt="Livergenplus (1L)"></div>
+    <h3>Livergenplus</h3>
+    <p>Highchem - Size: 1L</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 800</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+            <div class="product-card red-border" onclick="showProductDetail('Vitamin Neoxy (100g)', '300', 'Available', 'In Stock', '100g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/neoxy-vitamin.png" alt="Vitamin Neoxy (100g)"></div>
+                <h3>Vitamin Neoxy</h3>
+                <p>Metrovet Kenya Ltd. - Size: 100g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 300</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Trimovet (30gm)', '130', 'Available', 'In Stock', '30gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/trimovet 25g.png" alt="Trimovet (30gm)"></div>
+                <h3>Trimovet</h3>
+                <p>Metrovet Kenya Ltd. - Size: 30gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 130</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Trimovet (100gm)', '250', 'Available', 'In Stock', '100gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/trimovet 100g.png" alt="Trimovet (100gm)"></div>
+                <h3>Trimovet</h3>
+                <p>Metrovet Kenya Ltd. - Size: 100gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 250</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Antiprotozoal', '150', 'Available', 'In Stock', '30gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/amediostart-plus.png" alt="Antiprotozoal"></div>
+                <h3>Antiprotozoal</h3>
+                <p>Medisel Kenya Ltd. - Size: 30gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Amprolium (25g)', '100', 'Available', 'In Stock', '25g')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/amprolium 25g.png" alt="Amprolium (25g)"></div>
+                <h3>Amprolium</h3>
+                <p>Coccidiostat - Size: 25g</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Amprolium (100gm)', '250', 'Available', 'In Stock', '100gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/amprolium 100g.png" alt="Amprolium (100gm)"></div>
+                <h3>Amprolium</h3>
+                <p>Coccidiostat - Size: 100gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 250</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Cosatrim-vet', '150', 'Available', 'In Stock', '30gms')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/coastrim-vet 100g.png" alt="Cosatrim-vet"></div>
+                <h3>Cosatrim-vet</h3>
+                <p>Antibiotic - Size: 30gms</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Cosatrim-vet', '300', 'Available', 'In Stock', '100gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/coastrim-vet 100g.png" alt="Cosatrim-vet"></div>
+                <h3>Cosatrim-vet</h3>
+                <p>Antibiotic - Size: 100gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 300</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Esb3TM30%', '430', 'Available', 'In Stock', '20gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/esb 30 20g.png" alt="Esb3TM30%"></div>
+                <h3>Esb3TM30%</h3>
+                <p>Antibiotic - Size: 20gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 430</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- ANIMAL SALT & MINERALS CATEGORY -->
+        <h2 class="category-title blue">ANIMAL SALT & MINERALS</h2>
+        <div class="grid" id="saltGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Maclik super', '300', 'Available', 'In Stock', '1kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/molaplus.png" alt="Maclik super"></div>
+                <h3>Maclik super</h3>
+                <p>CKL African Limited. - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 300</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('stock lick', '50', 'Available', 'In Stock', '1kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/veta-mix stock lick.png" alt="stock lick"></div>
+                <h3>Stock Lick</h3>
+                <p>Veta-Mix - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 50</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('mineral bricks', '350', 'Available', 'In Stock', '2kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/malick mineral brick.png" alt="mineral bricks"></div>
+                <h3>Mineral Brick</h3>
+                <p>African Limited - Size: 2kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 350</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+        </div>
+        <!-- SPECIALTY FEEDS CATEGORY -->
+        <h2 class="category-title red">SPECIALTY FEEDS</h2>
+        <div class="grid" id="specialtyGrid">
+
+            <div class="product-card red-border" onclick="showProductDetail('Mola plus (Milk Booster)', '900', 'Available', 'In Stock', '5kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/mola plus milk booster.png" alt="Mola plus (Milk Booster)"></div>
+                <h3>Molaplus</h3>
+                <p>Milk Booster - Size: 5kgs</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 900</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Molaplus Microbes', '1800', 'Available', 'In Stock', '5kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/mola plus microbes.png" alt="Molaplus Microbes"></div>
+                <h3>Molaplus Microbes</h3>
+                <p>Microbial Supplement - Size: 5L</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 1,800</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CEREALS & GRAINS CATEGORY -->
+        <h2 class="category-title blue">CEREALS & GRAINS</h2>
+        <div class="grid" id="cerealsGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Pishori Rice', '190', 'Available', 'In Stock', '41kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/rice.jpg" alt="Pishori Rice"></div>
+                <h3>Pishori Rice</h3>
+                <p>Premium Rice - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 190</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Yellow Beans', '160', 'Available', 'In Stock', '43kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/beans.jpeg" alt="Yellow Beans"></div>
+                <h3>Yellow Beans</h3>
+                <p>Quality Beans - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 160</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Ndengu', '140', 'Available', 'In Stock', '40kgs')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/ndengu.jpeg" alt="Ndengu"></div>
+                <h3>Ndengu</h3>
+                <p>Ndengu - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 140</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FERTILIZERS CATEGORY -->
+        <h2 class="category-title red">FERTILIZERS</h2>
+        <div class="grid" id="fertilizersGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Urea', '250', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/urea.png" alt="Urea"></div>
+                <h3>Urea</h3>
+                <p>Nitrogen Fertilizer - Size: 1kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Yara Microp', '280', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/microp.jpeg" alt="Yara Microp"></div>
+                <h3>Yara Microp</h3>
+                <p>Micronutrient Fertilizer - Size: 50kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('CAN', '250', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/CAN.png" alt="CAN"></div>
+                <h3>CAN</h3>
+                <p>Fertilizer - Size: 50kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('DAP', '0', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/DAP.png" alt="DAP"></div>
+                <h3>DAP</h3>
+                <p>Fertilizer - Size: 50kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Amidas', '280', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/amidas fertilizer.png" alt="Amidas"></div>
+                <h3>Amidas</h3>
+                <p>Fertilizer - Size: 50kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Mavuno Topdressing', '280', 'Available', 'In Stock', '50kg')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/mavuno.png" alt="Mavuno Topdressing"></div>
+                <h3>Mavuno Topdressing</h3>
+                <p>Fertilizer - Size: 50kg</p>
+                <div class="product-details">
+                    <div class="product-price text-red"></div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- MILKING SALVE CATEGORY -->
+        <h2 class="category-title red">MILKING SALVE</h2>
+        <div class="grid" id="milkingSalveGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Milking Salve (50gm)', '100', 'Available', 'In Stock', '50gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/ckl milking salve 100g.png" alt="Milking Salve (50gm)"></div>
+                <h3>Milking Salve</h3>
+                <p>CKL African Limited - Size: 50gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 100</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+            <div class="product-card red-border" onclick="showProductDetail('Norbrook Milking Salve (100g)', '120', 'Available', 'In Stock', '100g')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/norbrook 100g.png" alt="Norbrook Milking Salve (100g)"></div>
+    <h3>Norbrook Milking Salve</h3>
+    <p>Norbrook - Size: 100g</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 120</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Norbrook Milking Salve (250g)', '220', 'Available', 'In Stock', '250g')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/norbrook 250g.png" alt="Norbrook Milking Salve (250g)"></div>
+    <h3>Norbrook Milking Salve</h3>
+    <p>Norbrook - Size: 250g</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 220</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card red-border" onclick="showProductDetail('Norbrook Milking Salve (1kg)', '650', 'Available', 'In Stock', '1kg')">
+    <div class="product-stock-badge in-stock">In Stock</div>
+    <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/norbrook milking salve 1kg.png" alt="Norbrook Milking Salve (1kg)"></div>
+    <h3>Norbrook Milking Salve</h3>
+    <p>Norbrook - Size: 1kg</p>
+    <div class="product-details">
+        <div class="product-price text-red">KES 650</div>
+        <div class="product-actions">
+            <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+        </div>
+    </div>
+</div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Milking Salve (100gm)', '150', 'Available', 'In Stock', '100gm')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/ckl milking salve 100g.png" alt="Milking Salve (100gm)"></div>
+                <h3>Milking Salve</h3>
+                <p>CKL African Limited - Size: 100gm</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 150</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+           
+          
+</div>
+            </div>
+
+        </div>
+        
+        <!-- FEEDERS CATEGORY -->
+        <h2 class="category-title blue">FEEDERS</h2>
+        <div class="grid" id="feedersGrid">
+            <div class="product-card blue-border" onclick="showProductDetail('Feeders (3Litres)', '350', 'Available', 'In Stock', '3Litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/feeder 3L.png" alt="Feeders (3Litres)"></div>
+                <h3>Feeders</h3>
+                <p>Feeder - Size: 3Litres</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 350</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Feeders (6Litres)', '430', 'Available', 'In Stock', '6Litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/feeder 5L.png" alt="Feeders (6Litres)"></div>
+                <h3>Feeders</h3>
+                <p>Feeder - Size: 6Litres</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 430</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card blue-border" onclick="showProductDetail('Feeders (10Litres)', '750', 'Available', 'In Stock', '10Litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/feeder 10L.png" alt="Feeders (10Litres)"></div>
+                <h3>Feeders</h3>
+                <p>Feeder - Size: 10Litres</p>
+                <div class="product-details">
+                    <div class="product-price text-blue">KES 750</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- DRINKERS CATEGORY -->
+        <h2 class="category-title red">DRINKERS</h2>
+        <div class="grid" id="drinkersGrid">
+            <div class="product-card red-border" onclick="showProductDetail('Drinkers (3Litres)', '350', 'Available', 'In Stock', '3Litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/drinker 3L.png" alt="Drinkers (3Litres)"></div>
+                <h3>Drinkers</h3>
+                <p>Drinker - Size: 3Litres</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 350</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Drinkers (6Litres)', '430', 'Available', 'In Stock', '6Litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/Drinker 5L.png" alt="Drinkers (6Litres)"></div>
+                <h3>Drinkers</h3>
+                <p>Drinker - Size: 6Litres</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 430</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+            <div class="product-card red-border" onclick="showProductDetail('Drinkers (10litres)', '750', 'Available', 'In Stock', '10litres')">
+                <div class="product-stock-badge in-stock">In Stock</div>
+                <div class="product-image"><img src="ASHRITA PRODUCTS PICTURES/drinker 10L.png" alt="Drinkers (10litres)"></div>
+                <h3>Drinkers</h3>
+                <p>Drinker - Size: 10litres</p>
+                <div class="product-details">
+                    <div class="product-price text-red">KES 750</div>
+                                    <div class="product-actions">
+                        <button class="product-action-btn cart-btn" onclick="addProductToCart(event, this)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="product-action-btn like-btn" onclick="toggleProductLike(event, this)"><i class="fa-regular fa-heart"></i> Like</button>
+                    </div>
+</div>
+            </div>
+
+        </div>
+
+        <!-- Bulk Orders Info -->
+        <div class="info-box">
+            <p><strong>Bulk Orders:</strong> We offer special discounts for bulk purchases. Contact us for quotations on larger quantities.</p>
+        </div>
+    </div>
+</div>
+<!-- ======================================== -->
+<!-- FEED FORMULATION INGREDIENTS - FULL LIST -->
+<!-- ======================================== -->
+<section class="feed-formulation ingredients-full-page" id="ingredients-section">
+    <div class="container">
+        <h2 class="section-title text-blue">Feed Formulation Ingredients</h2>
+        
+        <p class="section-subtitle">
+            We supply quality feed raw materials used in the formulation of nutritious livestock and poultry feeds. 
+            Our ingredients are carefully sourced to support healthy growth, productivity, and balanced animal nutrition.
+        </p>
+
+        <!-- All 8 Ingredients -->
+        <div class="ingredients-grid full-grid">
+            <div class="ingredient-card">
+                <h3>Maize Germ</h3>
+                <p>
+                    Maize germ is an excellent source of energy and is widely used in livestock and poultry feed formulations. 
+                    It supports growth, weight gain, and overall animal productivity.
+                </p>
+                <span class="ingredient-tag blue-tag">Energy Source</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Wheat Bran</h3>
+                <p>
+                    Wheat bran is rich in fibre and energy, helping improve digestion and feed utilization. 
+                    It is commonly used in cattle, poultry, pig, and other livestock feeds.
+                </p>
+                <span class="ingredient-tag red-tag">Fibre Rich</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Wheat Pollard</h3>
+                <p>
+                    Wheat pollard is a valuable feed ingredient that provides both energy and protein. 
+                    It is highly palatable and contributes to balanced animal nutrition.
+                </p>
+                <span class="ingredient-tag blue-tag">Balanced</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Sunflower Seed Cake</h3>
+                <p>
+                    Sunflower seed cake is a protein-rich ingredient obtained after oil extraction from sunflower seeds. 
+                    It supports muscle development, growth, and improved animal performance.
+                </p>
+                <span class="ingredient-tag red-tag">Protein Rich</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Soya Meal</h3>
+                <p>
+                    Soya meal is one of the highest quality plant protein sources used in feed formulation. 
+                    It contains essential amino acids necessary for healthy growth and production.
+                </p>
+                <span class="ingredient-tag blue-tag">Premium Protein</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Cotton Seed Cake</h3>
+                <p>
+                    Cotton seed cake is a nutritious protein supplement commonly used in dairy and beef cattle feeds. 
+                    It helps improve body condition and overall productivity.
+                </p>
+                <span class="ingredient-tag red-tag">Cattle Feed</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Fish Meal</h3>
+                <p>
+                    Fish meal is a premium protein source rich in amino acids, vitamins, and minerals. 
+                    It is particularly valuable in poultry, fish, and young animal feed formulations.
+                </p>
+                <span class="ingredient-tag blue-tag">Premium</span>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Limestone</h3>
+                <p>
+                    Limestone is an important source of calcium used in feed formulation. 
+                    It supports strong bones, healthy growth, and improved eggshell quality in laying birds.
+                </p>
+                <span class="ingredient-tag red-tag">Calcium Source</span>
+            </div>
+        </div>
+
+        <!-- Full Quality Standards -->
+        <div class="quality-standards full-standards">
+            <h3>Why Choose Our Feed Raw Materials?</h3>
+            <p>All our ingredients meet the highest quality standards for optimal animal nutrition.</p>
+            
+            <div class="standards-list full-list">
+                <div class="standard-item">
+                    <span class="check-mark">✓</span>
+                    <p><strong>High-Quality Sourcing:</strong> Raw materials sourced from trusted suppliers with verified quality.</p>
+                </div>
+                <div class="standard-item">
+                    <span class="check-mark">✓</span>
+                    <p><strong>Versatile Applications:</strong> Suitable for poultry, dairy cattle, beef cattle, pigs, fish, and other livestock.</p>
+                </div>
+                <div class="standard-item">
+                    <span class="check-mark">✓</span>
+                    <p><strong>Flexible Quantities:</strong> Available in different quantities to meet the needs of farmers and feed manufacturers.</p>
+                </div>
+                <div class="standard-item">
+                    <span class="check-mark">✓</span>
+                    <p><strong>Productivity Support:</strong> Supports healthy growth, improved productivity, and efficient feed formulation.</p>
+                </div>
+                <div class="standard-item">
+                    <span class="check-mark">✓</span>
+                    <p><strong>Expert Guidance:</strong> Professional advice available on selecting suitable feed ingredients for your animals.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="formulation-cta full-cta">
+            <h3>Need Feed Ingredients for Your Farm?</h3>
+            <p>Contact Ashrita Agrovet for quality feed raw materials and expert formulation advice.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Product Detail Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeProductDetail()">&times;</span>
+        <div class="modal-body">
+            <h2 id="modalProductName"></h2>
+            <div class="modal-details">
+                <p><strong>Price:</strong> KES <span id="modalPrice"></span></p>
+                <p class="modal-stock-row"><strong>Quantity in Stock:</strong> <span id="modalStock"></span></p>
+                <p><strong>Stock Status:</strong> <span id="modalStatus"></span></p>
+                <p><strong>Size/Unit:</strong> <span id="modalSize"></span></p>
+            </div>
+            <button class="btn btn-primary" onclick="inquireProduct()">Inquire About This Product</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Saved Items Modal -->
+<div id="savedItemsModal" class="modal">
+    <div class="modal-content saved-items-content">
+        <span class="modal-close" onclick="closeSavedList()">&times;</span>
+        <div class="modal-body">
+            <h2 id="savedItemsTitle">Saved Items</h2>
+            <div id="savedItemsList" class="saved-items-list"></div>
+        </div>
+    </div>
+</div>
+
+         
+
+    <!-- Footer -->
+   <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col about-company">
+                    <h4>ASHRITA FEEDS</h4>
+                     <img src="ASHRITA LOGO_110321.pdf.png" alt="ASHRITA Logo" class="footer-logo">
+                    <p>Welcome to ASHRITA, your trusted partner in animal agriculture. We provide premium quality animal feeds and agrovet medicines for all types of farms. </p>
+                </div>
+                <div class="footer-col quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</li>
+                        
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info">
+                    <h4>Contact Details</h4>
+                    <p>P.O Box 822 Mumias</p>
+                    <p>Kenya</p>
+                    <p>Email:<a href="mailto:ashritafarmsproductsandfeeds@gmail.com">ashritafarmsproductsandfeeds@gmail.com</a></p>
+                </div>
+                <div class="footer-col social-media">
+                    <h4>Follow Us</h4>
+                 <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                  
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> ASHRITA FEEDS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Update active nav link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        function showProductDetail(name, price, stock, status, size) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalPrice').textContent = price;
+            document.getElementById('modalStock').textContent = 'Available';
+            document.getElementById('modalStatus').textContent = 'In Stock';
+            document.getElementById('modalSize').textContent = size;
+            document.getElementById('productModal').classList.add('show');
+        }
+
+        function closeProductDetail() {
+            document.getElementById('productModal').classList.remove('show');
+        }
+
+        function inquireProduct() {
+            const productName = document.getElementById('modalProductName').textContent;
+            const message = encodeURIComponent('Hello ASHRITA, I would like to inquire about ' + productName);
+            window.open('https://wa.me/254715446134?text=' + message, '_blank');
+        }
+
+
+        const savedProducts = {
+            cart: JSON.parse(localStorage.getItem('ashritaCart') || '[]'),
+            likes: JSON.parse(localStorage.getItem('ashritaLikes') || '[]')
+        };
+
+        function getProductData(button) {
+            const card = button.closest('.product-card');
+            const name = card.getAttribute('onclick').match(/showProductDetail\('([^']+)'/)[1].replace('&#39;', "'");
+            const price = card.querySelector('.product-price').textContent.trim();
+            const sizeText = card.querySelector('p').textContent.trim();
+            const image = card.querySelector('.product-image img').getAttribute('src');
+            return { id: name + '|' + sizeText, name, price, sizeText, image };
+        }
+
+        function saveProducts() {
+            localStorage.setItem('ashritaCart', JSON.stringify(savedProducts.cart));
+            localStorage.setItem('ashritaLikes', JSON.stringify(savedProducts.likes));
+            updateSavedCounts();
+            updateLikeButtons();
+        }
+
+        function updateSavedCounts() {
+            document.getElementById('cartCount').textContent = savedProducts.cart.length;
+            document.getElementById('likesCount').textContent = savedProducts.likes.length;
+        }
+
+        function addProductToCart(event, button) {
+            event.preventDefault();
+            event.stopPropagation();
+            const product = getProductData(button);
+            if (!savedProducts.cart.some(item => item.id === product.id)) {
+                savedProducts.cart.push(product);
+                saveProducts();
+                button.classList.add('active');
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Added';
+            }
+        }
+
+        function toggleProductLike(event, button) {
+            event.preventDefault();
+            event.stopPropagation();
+            const product = getProductData(button);
+            const existingIndex = savedProducts.likes.findIndex(item => item.id === product.id);
+            if (existingIndex >= 0) {
+                savedProducts.likes.splice(existingIndex, 1);
+            } else {
+                savedProducts.likes.push(product);
+            }
+            saveProducts();
+        }
+
+        function updateCartButtons() {
+            document.querySelectorAll('.cart-btn').forEach(button => {
+                const product = getProductData(button);
+                const inCart = savedProducts.cart.some(item => item.id === product.id);
+                button.classList.toggle('active', inCart);
+                button.innerHTML = inCart ? '<i class="fa-solid fa-check"></i> Added' : '<i class="fa-solid fa-cart-plus"></i> Add to Cart';
+            });
+        }
+
+        function updateLikeButtons() {
+            document.querySelectorAll('.like-btn').forEach(button => {
+                const product = getProductData(button);
+                const liked = savedProducts.likes.some(item => item.id === product.id);
+                button.classList.toggle('active', liked);
+                button.innerHTML = liked ? '<i class="fa-solid fa-heart"></i> Liked' : '<i class="fa-regular fa-heart"></i> Like';
+            });
+        }
+
+        function openSavedList(type) {
+            const title = type === 'cart' ? 'Cart Items' : 'Liked Products';
+            const items = savedProducts[type];
+            document.getElementById('savedItemsTitle').textContent = title;
+            document.getElementById('savedItemsList').innerHTML = items.length ? items.map(item => `
+                <div class="saved-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>${item.sizeText}</p>
+                        <strong>${item.price}</strong>
+                    </div>
+                    <button onclick="removeSavedItem('${type}', '${item.id.replace(/'/g, "\\'")}')">Remove</button>
+                </div>
+            `).join('') : '<p class="empty-saved-message">No items here yet.</p>';
+            document.getElementById('savedItemsModal').classList.add('show');
+        }
+
+        function closeSavedList() {
+            document.getElementById('savedItemsModal').classList.remove('show');
+        }
+
+        function removeSavedItem(type, id) {
+            savedProducts[type] = savedProducts[type].filter(item => item.id !== id);
+            saveProducts();
+            openSavedList(type);
+        }
+
+        // Product Search Function
+function searchProducts() {
+    const searchInput = document.getElementById('productSearch');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    const productCards = document.querySelectorAll('.product-card');
+    const categoryTitles = document.querySelectorAll('.category-title');
+    const noResults = document.getElementById('noResults');
+    const searchInfo = document.getElementById('searchInfo');
+    const resultsCount = document.getElementById('resultNumber');
+    const searchTermSpan = document.getElementById('searchTerm');
+    
+    let totalMatches = 0;
+    let hasVisibleCategories = false;
+    
+    // If search is empty, show all products
+    if (searchTerm === '') {
+        productCards.forEach(card => {
+            card.classList.remove('hidden', 'highlight');
+        });
+        categoryTitles.forEach(title => {
+            title.classList.remove('hidden', 'visible');
+        });
+        noResults.style.display = 'none';
+        searchInfo.style.display = 'none';
+        return;
+    }
+    
+    // Search through each product card
+    productCards.forEach(card => {
+        const productName = card.querySelector('h3').textContent.toLowerCase();
+        const productDescription = card.querySelector('p').textContent.toLowerCase();
+        
+        // Check if search term matches product name or description
+        const matches = productName.includes(searchTerm) || 
+                       productDescription.includes(searchTerm);
+        
+        if (matches) {
+            card.classList.remove('hidden');
+            card.classList.add('highlight');
+            totalMatches++;
+        } else {
+            card.classList.add('hidden');
+            card.classList.remove('highlight');
+        }
+    });
+    
+    // Show/hide category titles based on visible products
+    categoryTitles.forEach(title => {
+        const nextElement = title.nextElementSibling;
+        let hasVisibleProducts = false;
+        
+        // Check if any products in this category are visible
+        if (nextElement && nextElement.classList.contains('grid')) {
+            const productsInCategory = nextElement.querySelectorAll('.product-card');
+            hasVisibleProducts = Array.from(productsInCategory).some(
+                product => !product.classList.contains('hidden')
+            );
+        }
+        
+        if (hasVisibleProducts) {
+            title.classList.remove('hidden');
+            title.classList.add('visible');
+            hasVisibleCategories = true;
+        } else {
+            title.classList.add('hidden');
+            title.classList.remove('visible');
+        }
+    });
+    
+    // Show/hide no results message
+    if (totalMatches === 0) {
+        noResults.style.display = 'block';
+        searchTermSpan.textContent = searchTerm;
+        searchInfo.style.display = 'none';
+    } else {
+        noResults.style.display = 'none';
+        searchInfo.style.display = 'block';
+        resultsCount.textContent = totalMatches;
+    }
+}
+
+
+function makeProductCardsNavigable() {
+    const searchInput = document.getElementById('productSearch');
+    document.querySelectorAll('.product-card').forEach((card, index) => {
+        if (!card.id) {
+            const productName = card.querySelector('h3').textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            card.id = productName ? `product-${productName}-${index + 1}` : `product-${index + 1}`;
+        }
+        card.addEventListener('click', function(event) {
+            if (event.target.closest('.product-action-btn')) {
+                return;
+            }
+            if (searchInput && searchInput.value.trim() !== '') {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                const selectedCard = this;
+                searchInput.value = '';
+                searchProducts();
+                selectedCard.classList.add('highlight');
+                selectedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                window.history.replaceState(null, '', '#' + selectedCard.id);
+                setTimeout(() => selectedCard.classList.remove('highlight'), 2500);
+            }
+        }, true);
+    });
+}
+
+// Clear Search Function
+function clearSearch() {
+    document.getElementById('productSearch').value = '';
+    searchProducts();
+    document.getElementById('productSearch').focus();
+}
+
+// Optional: Allow Enter key to clear search
+document.addEventListener('DOMContentLoaded', function() {
+    makeProductCardsNavigable();
+    updateSavedCounts();
+    updateCartButtons();
+    updateLikeButtons();
+    const searchInput = document.getElementById('productSearch');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Escape') {
+                clearSearch();
+            }
+        });
+    }
+});
+function searchProducts() {
+    const searchInput = document.getElementById('productSearch');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    const productCards = document.querySelectorAll('.product-card');
+    
+    // 🔽 ADD THIS LINE - Get ingredient cards
+    const ingredientCards = document.querySelectorAll('.ingredient-card');
+    
+    const categoryTitles = document.querySelectorAll('.category-title');
+    
+    // 🔽 ADD THESE LINES - Get ingredients section elements
+    const ingredientsSection = document.querySelector('.ingredients-section');
+    const ingredientsTitle = document.querySelector('.ingredients-section .section-title');
+    const ingredientsSubtitle = document.querySelector('.ingredients-section .section-subtitle');
+    
+    const noResults = document.getElementById('noResults');
+    const searchInfo = document.getElementById('searchInfo');
+    const resultsCount = document.getElementById('resultNumber');
+    const searchTermSpan = document.getElementById('searchTerm');
+    
+    let totalMatches = 0;
+    let hasVisibleCategories = false;
+    
+    if (searchTerm === '') {
+        productCards.forEach(card => {
+            card.classList.remove('hidden', 'highlight');
+        });
+        
+        // 🔽 ADD THIS - Show all ingredient cards when search is empty
+        ingredientCards.forEach(card => {
+            card.classList.remove('hidden', 'highlight');
+        });
+        
+        categoryTitles.forEach(title => {
+            title.classList.remove('hidden', 'visible');
+        });
+        
+        // 🔽 ADD THIS - Show ingredients section when search is empty
+        if (ingredientsSection) {
+            ingredientsSection.style.display = 'block';
+        }
+        if (ingredientsTitle) {
+            ingredientsTitle.classList.remove('hidden');
+        }
+        if (ingredientsSubtitle) {
+            ingredientsSubtitle.classList.remove('hidden');
+        }
+        
+        noResults.style.display = 'none';
+        searchInfo.style.display = 'none';
+        return;
+    }
+    
+    // Search through product cards (keep this as is)
+    productCards.forEach(card => {
+        const productName = card.querySelector('h3').textContent.toLowerCase();
+        const productDescription = card.querySelector('p').textContent.toLowerCase();
+        
+        const matches = productName.includes(searchTerm) || 
+                       productDescription.includes(searchTerm);
+        
+        if (matches) {
+            card.classList.remove('hidden');
+            card.classList.add('highlight');
+            totalMatches++;
+        } else {
+            card.classList.add('hidden');
+            card.classList.remove('highlight');
+        }
+    });
+    
+    // 🔽 ADD THIS ENTIRE BLOCK - Search through ingredient cards
+    let ingredientsVisible = false;
+    
+    ingredientCards.forEach(card => {
+        const ingredientName = card.querySelector('h3')?.textContent.toLowerCase() || '';
+        const ingredientDescription = card.querySelector('p')?.textContent.toLowerCase() || '';
+        const ingredientTag = card.querySelector('.ingredient-tag')?.textContent.toLowerCase() || '';
+        
+        const matches = ingredientName.includes(searchTerm) || 
+                       ingredientDescription.includes(searchTerm) ||
+                       ingredientTag.includes(searchTerm);
+        
+        if (matches) {
+            card.classList.remove('hidden');
+            card.classList.add('highlight');
+            totalMatches++;
+            ingredientsVisible = true;
+        } else {
+            card.classList.add('hidden');
+            card.classList.remove('highlight');
+        }
+    });
+    
+    // 🔽 ADD THIS BLOCK - Show/hide ingredients section
+    if (ingredientsSection) {
+        if (ingredientsVisible) {
+            ingredientsSection.style.display = 'block';
+        } else {
+            ingredientsSection.style.display = 'none';
+        }
+    }
+    
+    if (ingredientsTitle) {
+        if (ingredientsVisible) {
+            ingredientsTitle.classList.remove('hidden');
+            ingredientsTitle.classList.add('visible');
+        } else {
+            ingredientsTitle.classList.add('hidden');
+            ingredientsTitle.classList.remove('visible');
+        }
+    }
+    
+    if (ingredientsSubtitle) {
+        if (ingredientsVisible) {
+            ingredientsSubtitle.classList.remove('hidden');
+            ingredientsSubtitle.classList.add('visible');
+        } else {
+            ingredientsSubtitle.classList.add('hidden');
+            ingredientsSubtitle.classList.remove('visible');
+        }
+    }
+    
+    // Keep the rest of your existing code
+    categoryTitles.forEach(title => {
+        const nextElement = title.nextElementSibling;
+        let hasVisibleProducts = false;
+        
+        if (nextElement && nextElement.classList.contains('grid')) {
+            const productsInCategory = nextElement.querySelectorAll('.product-card');
+            hasVisibleProducts = Array.from(productsInCategory).some(
+                product => !product.classList.contains('hidden')
+            );
+        }
+        
+        if (hasVisibleProducts) {
+            title.classList.remove('hidden');
+            title.classList.add('visible');
+            hasVisibleCategories = true;
+        } else {
+            title.classList.add('hidden');
+            title.classList.remove('visible');
+        }
+    });
+    
+    if (totalMatches === 0) {
+        noResults.style.display = 'block';
+        searchTermSpan.textContent = searchTerm;
+        searchInfo.style.display = 'none';
+    } else {
+        noResults.style.display = 'none';
+        searchInfo.style.display = 'block';
+        resultsCount.textContent = totalMatches;
+    }
+}
+    </script>
+    <div class="whatsapp-float">
+    <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
+       target="_blank" 
+       class="whatsapp-link" 
+       title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+</div>
+</body>
+</html>

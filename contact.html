@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHRITA - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://kit.fontawesome.com/cdbf25ccfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="header-actions">
+                    <button class="header-action-btn" onclick="openSavedList('cart')" title="View cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                        <span class="action-count" id="cartCount">0</span>
+                    </button>
+                    <button class="header-action-btn" onclick="openSavedList('likes')" title="View liked products">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Likes</span>
+                        <span class="action-count" id="likesCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                 <img src="ASHRITA LOGO_110321.pdf.png">
+            </a>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="phone-number">
+                    <a href="tel:+254715446134">Call Us 📞 +254 715 446 134</a>
+                </div>
+                 <div class="header-social-wrapper">
+        <span class="header-social-label">Follow Us</span>
+        <div class="header-social">
+            <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+    <div class="page-hero">
+    <div class="hero-background" style="background-image: url('one chicken.jpg');">
+    </div>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">We're here to help! Get in touch with any questions or place an order.</p>
+    </div>
+</div>
+
+    
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon text-red">📍</div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Mayoni, Kakamega</p>
+                                <p>Serving Mayoni and surrounding areas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon text-blue">📞</div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+254 715 446 134</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon text-red">✉️</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>ashritafarmsproductsandfeeds@gmail.com</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card highlight">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        <p>Saturday: 8:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <form class="form" onsubmit="handleSubmit(event)">
+                        <h2>Send us a Message</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn"> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="contact-benefits">
+    <h2>Why Contact ASHRITA?</h2>
+
+    <div class="benefits-grid">
+        <div>
+            <h3>✓ Expert Advice</h3>
+            <p>Get guidance on selecting the right feeds and agrovet products for your farm.</p>
+        </div>
+
+        <div>
+            <h3>✓ Fast Delivery</h3>
+            <p>We deliver quality products quickly and reliably to farmers in our service areas.</p>
+        </div>
+
+        <div>
+            <h3>✓ Genuine Products</h3>
+            <p>We stock trusted brands and quality products that support healthy livestock.</p>
+        </div>
+    </div>
+</section>
+    
+        <section class="map-section">
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.732630081671!2d34.48832614798448!3d0.3755152523290828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177f879e453a96b9%3A0xb1e202a580d07322!2sRubis%20Mayoni%20Junction!5e0!3m2!1sen!2ske!4v1781012127101!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="font-size: 0.85em; margin-top: 15px; color: var(--text-color); text-align: center;">
+                Find us easily on the map at Rubis Mayoni Junction.
+            </p>
+        </section>
+        <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>Do you offer delivery?</h3>
+        <p>Yes, we deliver feeds and agrovet products to surrounding areas.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Do you sell poultry feeds?</h3>
+        <p>Yes, we stock a variety of quality poultry feeds and supplements.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I order through WhatsApp?</h3>
+        <p>Absolutely. Simply click the WhatsApp button and send us your inquiry.</p>
+    </div>
+</section>
+<div class="response-banner">
+    <p>
+         We typically respond to calls and WhatsApp messages within 30 minutes during business hours.
+    </p>
+</div>
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col about-company">
+                    <h4>ASHRITA FEEDS</h4>
+                     <img src="ASHRITA LOGO_110321.pdf.png" alt="ASHRITA Logo" class="footer-logo">
+                    <p>Welcome to ASHRITA, your trusted partner in animal agriculture. We provide premium quality animal feeds and agrovet medicines for all types of farms. </p>
+                </div>
+                <div class="footer-col quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info">
+                    <h4>Contact Details</h4>
+                    <p>P.O Box 822 Mumias</p>
+                    <p>Kenya</p>
+                    <p>Email: <a href="mailto:ashritafarmsproductsandfeeds@gmail.com">ashritafarmsproductsandfeeds@gmail.com</a></p>
+                </div>
+                <div class="footer-col social-media">
+                    <h4>Follow Us</h4>
+                 <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                  
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> ASHRITA FEEDS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Update active nav link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Form Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            
+            // Reset form
+            document.querySelector('.form').reset();
+        }
+    </script>
+    <script>
+// Initialize cart and likes counts from localStorage
+function initializeSavedCounts() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initializeSavedCounts);
+
+// Check for cart/likes updates periodically
+setInterval(function() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}, 500);
+    </script>
+    <div class="whatsapp-float">
+    <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
+       target="_blank" 
+       class="whatsapp-link" 
+       title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+</div>
+</body>
+</html>

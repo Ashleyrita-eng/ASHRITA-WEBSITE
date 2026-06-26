@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHRITA - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://kit.fontawesome.com/cdbf25ccfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="header-actions">
+                    <button class="header-action-btn" onclick="openSavedList('cart')" title="View cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                        <span class="action-count" id="cartCount">0</span>
+                    </button>
+                    <button class="header-action-btn" onclick="openSavedList('likes')" title="View liked products">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Likes</span>
+                        <span class="action-count" id="likesCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="ASHRITA LOGO_110321.pdf.png">
+            </a>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="phone-number">
+                    <a href="tel:+254715446134">Call Us 📞 +254 715 446 134</a>
+                </div>
+                 <div class="header-social-wrapper">
+        <span class="header-social-label">Follow Us</span>
+        <div class="header-social">
+            <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+    <div class="page-hero">
+    <div class="hero-background" style="background-image: url('maize.jpg');">
+    </div>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">Our Services</h1>
+        <p class="hero-subtitle">Beyond just selling products - we're your complete farm partner</p>
+    </div>
+</div>
+<section class="service-overview">
+    <div class="container">
+        <h2 class="section-title">What We Offer</h2>
+
+        <p class="section-subtitle">
+            At ASHRITA Feeds, we are committed to supporting farmers through
+            quality products, professional advice, and reliable services.
+            Our goal is to help improve animal health, farm productivity,
+            and profitability through trusted agricultural solutions.
+        </p>
+
+      <div class="overview-item">
+    <img src="How to Store Animal Feed - Rodent Proof.jpeg" alt="Animal Feeds">
+
+    <h3> Animal Feeds</h3>
+
+    <p>
+        Quality feeds for poultry, fish, dairy cattle and other livestock.
+    </p>
+</div>
+
+<div class="overview-item">
+    <img src="shelves.png" alt="Agrovet Products">
+
+    <h3>Agrovet Products</h3>
+
+    <p>
+        Medicines, supplements and health solutions for your animals.
+    </p>
+</div>
+
+
+
+<div class="overview-item">
+    <img src="cow consultation.png" alt="Farm Consultation">
+
+    <h3>Farm Consultation</h3>
+
+    <p>
+        Expert guidance on animal nutrition and farm management.
+    </p>
+</div>
+</section>
+
+    <!-- Services Section -->
+  
+            <div class="service-card">
+                <h2 class="text-blue">Professional Consultations</h2>
+                <p>Our experienced team provides expert advice on selecting the right feeds and supplements for your specific animals. We assess your farm's needs and recommend products that will maximize your productivity and profitability.</p>
+                <p class="service-info">✓ Available for in-farm consultations</p>
+            </div>
+
+            <div class="service-card">
+                <h2 class="text-red">Fast & Reliable Delivery</h2>
+                <p>We deliver quality products directly to your doorstep. Our delivery service covers Kakamega and surrounding areas. Orders are processed quickly to ensure your animals never run out of essential feeds and medicines.</p>
+                <p class="service-info">✓ Same-day and next-day delivery options available</p>
+            </div>
+
+            <div class="service-card">
+                <h2 class="text-blue">Bulk Order Discounts</h2>
+                <p>Running a large farm? We offer competitive pricing for bulk purchases. The more you buy, the better your savings. Contact us for customized quotes on your regular supply needs.</p>
+                <p class="service-info">✓ Flexible payment terms for regular customers</p>
+            </div>
+
+            <div class="service-card">
+                <h2 class="text-red">Animal Health Support</h2>
+                <p>Beyond medicines, we provide guidance on animal health management, disease prevention, and proper medication administration. Our goal is to help you maintain healthy, productive animals.</p>
+                <p class="service-info">✓ Phone support available during business hours</p>
+            </div>
+
+            <div class="service-card">
+                <h2 class="text-blue">Stock Availability Updates</h2>
+                <p>Never worry about product availability. We maintain consistent stock of all our products and can notify you when new items arrive or when stock is running low.</p>
+                <p class="service-info">✓ Subscribe to our stock alerts</p>
+            </div>
+        </div>
+    </div>
+    <section class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <h3>1. Contact Us</h3>
+                <p>
+                    Call, WhatsApp or visit our store to tell us
+                    what products or services you need.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <h3>2. Get Expert Advice</h3>
+                <p>
+                    Our team helps you select the best feeds,
+                    medicines and supplements for your animals.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <h3>3. Place Your Order</h3>
+                <p>
+                    Confirm your order and choose pickup
+                    or delivery options.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <h3>4. Receive Your Products</h3>
+                <p>
+                    We deliver quality products directly
+                    to your farm or business location.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="areas-served">
+    <div class="container">
+        <h2 class="section-title">Areas We Serve</h2>
+
+        <p class="section-subtitle">
+            We proudly serve farmers and businesses across
+            Western Kenya and surrounding regions.
+        </p>
+
+        <div class="areas-grid">
+            <span>📍 Mayoni</span>
+            <span>📍 Mumias</span>
+            <span>📍 Kakamega</span>
+            <span>📍 Bungoma</span>
+            <span>📍 Busia</span>
+            <span>📍 Vihiga</span>
+            
+            <span>📍 Butere</span>
+            <span>📍 Sabatia</span>
+        </div>
+    </div>
+</section>
+<section class="service-cta">
+    <div class="container">
+        <h2>Need Professional Farm Support?</h2>
+
+        <p>
+            Contact ASHRITA today for quality feeds,
+            agrovet products, expert advice and fast delivery.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+            Contact Us Today
+        </a>
+    </div>
+</section>
+
+    <!-- Footer -->
+   <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col about-company">
+                    <h4>ASHRITA FEEDS</h4>
+                     <img src="ASHRITA LOGO_110321.pdf.png" alt="ASHRITA Logo" class="footer-logo">
+                    <p>Welcome to ASHRITA, your trusted partner in animal agriculture. We provide premium quality animal feeds and agrovet medicines for all types of farms. </p>
+                </div>
+                <div class="footer-col quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info">
+                    <h4>Contact Details</h4>
+                    <p>P.O Box 822 Mumias</p>
+                    <p>Kenya</p>
+                    <p>Email: <a href="mailto:ashritafarmsproductsandfeeds@gmail.com">ashritafarmsproductsandfeeds@gmail.com</a></p>
+                </div>
+                <div class="footer-col social-media">
+                    <h4>Follow Us</h4>
+                   <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> ASHRITA FEEDS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Update active nav link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+// Initialize cart and likes counts from localStorage
+function initializeSavedCounts() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initializeSavedCounts);
+
+// Check for cart/likes updates periodically
+setInterval(function() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}, 500);
+    </script>
+    <div class="whatsapp-float">
+    <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
+       target="_blank" 
+       class="whatsapp-link" 
+       title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+</div>
+</body>
+</html>

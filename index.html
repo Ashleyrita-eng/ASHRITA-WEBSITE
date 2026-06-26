@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHRITA - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://kit.fontawesome.com/cdbf25ccfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="header-actions">
+                    <button class="header-action-btn" onclick="openSavedList('cart')" title="View cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart</span>
+                        <span class="action-count" id="cartCount">0</span>
+                    </button>
+                    <button class="header-action-btn" onclick="openSavedList('likes')" title="View liked products">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Likes</span>
+                        <span class="action-count" id="likesCount">0</span>
+                    </button>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+               <img src="ASHRITA LOGO_110321.pdf.png">
+            </a>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <div class="nav-right">
+    <!-- Call Us -->
+    <div class="phone-number">
+        <a href="tel:+254715446134">Call Us 📞 +254 715 446 134</a>
+    </div>
+    
+    <!-- Follow Us - NOW INSIDE nav-right -->
+    <div class="header-social-wrapper">
+        <span class="header-social-label">Follow Us</span>
+        <div class="header-social">
+            <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+  
+    
+    <!-- Menu Toggle - NOW INSIDE nav-right -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+     <div class="hero">
+    <!-- Carousel Container -->
+    <div class="carousel-container" id="carouselContainer">
+        <!-- Slide 1 - First Photo -->
+        <div class="carousel-slide" style="background-image: url('field\ of\ cows.jpg');">
+        </div>
+
+        <!-- Slide 2 - Second Photo -->
+        <div class="carousel-slide" style="background-image: url('field\ of\ chicken.jpg');">
+        </div>
+    </div>
+
+    <!-- Hero Content (Text Overlay) -->
+    <div class="hero-content">
+        <h1>ASHRITA</h1>
+        <p class="tagline">...We Deliver!...</p>
+        <p>Quality Animal Feeds & Agrovet Medicines for Your Farm</p>
+         <a href="products.html" class="btn btn-primary">Browse Our Products </a>
+    </div>
+
+    <!-- Previous Button (Left Arrow) -->
+    <button class="carousel-arrow prev" onclick="prevSlide()">❮</button>
+
+    <!-- Next Button (Right Arrow) -->
+    <button class="carousel-arrow next" onclick="nextSlide()">❯</button>
+
+    <!-- Navigation Dots -->
+    <div class="carousel-nav">
+        <div class="carousel-dot active" onclick="goToSlide(0)"></div>
+        <div class="carousel-dot" onclick="goToSlide(1)"></div>
+    </div>
+</div>
+<section class="about-preview">
+    <div class="about-container">
+        <!-- Images on Left -->
+        <div class="about-images-wrapper">
+            <div class="about-images">
+                <img src="about us.jpg" alt="ASHRITA Feed Image 1" class="about-img-1">
+                <img src="about us 2.jpg" alt="ASHRITA Feed Image 2" class="about-img-2">
+            </div>
+        </div>
+
+        <!-- Text on Right -->
+        <div class="about-text-wrapper">
+            <h2>ABOUT ASHRITA FEEDS</h2>
+            <p>
+                ASHRITA Feeds is committed to providing quality animal feeds,
+                veterinary medicines, and expert agricultural support to farmers.
+                We help farmers improve productivity through reliable products and
+                professional guidance.
+            </p>
+        </div>
+    </div>
+</section>    
+<!-- Featured Products -->
+    <div class="section">
+        <div class="container">
+            <h2 class="section-title text-blue">Featured Products</h2>
+            <p class="section-subtitle">Discover our range of quality products</p>
+            <div class="featured-grid">
+                <div class="featured-card blue">
+                    <div class="product-icon animated-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Water waves -->
+                            <path d="M 0 120 Q 25 110 50 120 T 100 120 T 150 120 T 200 120 L 200 200 L 0 200 Z" fill="#0088CC" opacity="0.3" class="wave"></path>
+                            <path d="M 0 130 Q 25 120 50 130 T 100 130 T 150 130 T 200 130 L 200 200 L 0 200 Z" fill="#0088CC" opacity="0.5" class="wave" style="animation-delay: 0.5s;"></path>
+                            <!-- Fish body -->
+                            <ellipse cx="100" cy="80" rx="30" ry="20" fill="#0088CC" class="fish-body"></ellipse>
+                            <!-- Fish head -->
+                            <circle cx="70" cy="80" r="15" fill="#0088CC"></circle>
+                            <!-- Fish eye -->
+                            <circle cx="65" cy="75" r="4" fill="white"></circle>
+                            <!-- Fish tail -->
+                            <polygon points="130,80 160,60 160,100" fill="#0088CC" class="fish-tail"></polygon>
+                            <!-- Fin -->
+                            <ellipse cx="100" cy="60" rx="12" ry="15" fill="#0088CC" opacity="0.7" class="fish-fin"></ellipse>
+                        </svg>
+                    </div>
+                    <h3>Fish Feeds</h3>
+                    <p>Premium quality feeds for all fish species and growth stages</p>
+                    <a href="products.html" class="btn btn-primary">View Products →</a>
+                </div>
+                <div class="featured-card red">
+                    <div class="product-icon animated-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Egg shell top -->
+                            <ellipse cx="100" cy="100" rx="40" ry="50" fill="#DC143C" class="egg-shell"></ellipse>
+                            <!-- Egg highlight -->
+                            <ellipse cx="85" cy="70" rx="15" ry="20" fill="#ff6b7a" opacity="0.6"></ellipse>
+                            <!-- Egg shine -->
+                            <ellipse cx="90" cy="60" rx="8" ry="12" fill="white" opacity="0.4"></ellipse>
+                            <!-- Feather 1 -->
+                            <path d="M 60 120 Q 50 100 45 80" stroke="#DC143C" stroke-width="3" fill="none" class="feather"></path>
+                            <!-- Feather 2 -->
+                            <path d="M 140 120 Q 150 100 155 80" stroke="#DC143C" stroke-width="3" fill="none" class="feather" style="animation-delay: 0.2s;"></path>
+                            <!-- Feather 3 -->
+                            <path d="M 100 150 Q 110 140 115 120" stroke="#DC143C" stroke-width="3" fill="none" class="feather" style="animation-delay: 0.4s;"></path>
+                        </svg>
+                    </div>
+                    <h3>Poultry Feeds</h3>
+                    <p>Complete nutrition for chickens and other birds</p>
+                    <a href="products.html" class="btn btn-primary">View Products →</a>
+                </div>
+                <div class="featured-card blue">
+                    <div class="product-icon animated-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Bottle body -->
+                            <rect x="70" y="50" width="60" height="90" rx="10" fill="#0088CC" class="bottle-body"></rect>
+                            <!-- Bottle cap -->
+                            <rect x="80" y="40" width="40" height="15" rx="3" fill="#333"></rect>
+                            <!-- Bottle label -->
+                            <rect x="75" y="70" width="50" height="50" rx="5" fill="white" opacity="0.9"></rect>
+                            <!-- Label cross (medical symbol) -->
+                            <rect x="100" y="80" width="4" height="20" fill="#DC143C"></rect>
+                            <rect x="92" y="88" width="16" height="4" fill="#DC143C"></rect>
+                            <!-- Shine on bottle -->
+                            <ellipse cx="80" cy="65" rx="8" ry="25" fill="white" opacity="0.3" class="bottle-shine"></ellipse>
+                            <!-- Liquid level indicator -->
+                            <rect x="72" y="120" width="56" height="15" rx="3" fill="#0088CC" opacity="0.5"></rect>
+                        </svg>
+                    </div>
+                    <h3>Agrovet Products</h3>
+                    <p>Medicines, supplements, and health solutions for your animals</p>
+                    <a href="products.html" class="btn btn-primary">View Products →</a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- Fertilized Eggs Section -->
+<section class="fertilized-eggs-section">
+    <div class="container">
+        <div class="fertilized-eggs-content">
+            <div class="eggs-image-container">
+                <img src="eggs.jpg" alt="Fertilized Eggs">
+            </div>
+            
+            <div class="eggs-info">
+                <h2 class="section-title text-blue">Fertilized Eggs - Nature's Perfect Start</h2>
+                
+                <div class="eggs-benefits">
+                    <div class="eggs-detail">
+                        <h3><span class="icon"></span> What Are Fertilized Eggs?</h3>
+                        <p>Fertilized eggs are eggs that have been exposed to male birds (roosters) and contain a developing embryo. These eggs have the potential to hatch into healthy chicks when provided with proper incubation conditions. Unlike regular table eggs, fertilized eggs are the foundation of any successful poultry breeding program.</p>
+                    </div>
+
+                    <div class="eggs-detail">
+                        <h3><span class="icon">✓</span> Key Benefits</h3>
+                        <ul class="benefits-list">
+                            <li>Higher hatchability rates when properly handled</li>
+                            <li>Genetic diversity for breeding stock improvement</li>
+                            <li>Cost-effective way to expand your flock</li>
+                            <li>Support local farming and sustainability</li>
+                            <li>Quality assurance from trusted suppliers</li>
+                        </ul>
+                    </div>
+
+                    <div class="eggs-detail">
+                        <h3><span class="icon"></span> Optimal Handling & Storage</h3>
+                        <p>For best results, fertilized eggs should be stored at 55-65°F (13-18°C) with 75% humidity. Eggs should be turned regularly and stored for no more than 10 days before incubation. Keep eggs clean, handle gently, and avoid temperature fluctuations to maintain high fertility rates and ensure strong chick development.</p>
+                    </div>
+
+                    <div class="eggs-detail">
+                        <h3><span class="icon"></span> Incubation Success</h3>
+                        <p>Proper incubation requires consistent temperature (99.5°F for still-air incubators), humidity levels, and egg turning. A quality incubator combined with ASHRITA's premium feeds and supplements ensures your chicks develop strong and healthy. Our team can provide guidance on incubation best practices for maximum hatch rates.</p>
+                    </div>
+                </div>
+
+                <div class="eggs-cta">
+                    <p><strong>Looking for quality fertilized eggs?</strong> Contact ASHRITA today for premium breeds and expert advice on hatching success.</p>
+                    <a href="contact.html" class="btn btn-primary">Get Your Fertilized Eggs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="contact-banner">
+    <h2>Need Help Choosing the Right Product?</h2>
+    <p>Call or WhatsApp us today.</p>
+
+    <a href="tel:+254715446134">Call Now</a>
+</section>
+
+    <section class="farm-tips">
+    <h2>Farming Tips</h2>
+
+    <div class="tip-card">
+        <img src="chicken image.png" alt="Poultry Feeding Guide">
+
+        <h3>Poultry Feeding Guide</h3>
+
+        <p>
+            Proper nutrition is essential for healthy and productive poultry.
+            Ensure your birds receive the right feed at each growth stage,
+            provide clean drinking water at all times, and maintain a clean
+            feeding environment. A balanced feeding program helps improve
+            growth rates, egg production, and overall flock health.
+        </p>
+    </div>
+
+    <div class="tip-card">
+        <img src="fish image.png" alt="Fish Feeding Tips">
+
+        <h3>Fish Feeding Tips</h3>
+
+        <p>
+            Feeding fish correctly is crucial for their growth and health. Use
+            high-quality feed appropriate for the species and size of your fish.
+            Feed small amounts multiple times a day, and avoid overfeeding to
+            prevent water pollution. Monitor water quality regularly to ensure
+            optimal conditions for your aquatic livestock.
+          
+        </p>
+    </div>
+
+    <div class="tip-card">
+        <img src="cow image.png" alt="Dairy Cow Nutrition">
+
+        <h3>Dairy Cow Nutrition</h3>
+
+        <p>
+            High-quality feeds are crucial for maintaining healthy dairy cows
+            and achieving good milk production. Provide a balanced diet that
+            includes sufficient energy, protein, vitamins, and minerals while
+            ensuring constant access to clean water. Proper nutrition supports
+            animal health, fertility, and improved milk yields throughout the year.
+        </p>
+    </div>
+</section>
+<!-- Feed Formulation Ingredients - Brief Homepage Version -->
+<section class="feed-formulation">
+    <div class="container">
+        <h2 class="section-title text-blue">Feed Formulation Ingredients</h2>
+        
+        <p class="section-subtitle">
+            We supply quality feed raw materials used in the formulation of nutritious livestock and poultry feeds. 
+            Our ingredients are carefully sourced to support healthy growth, productivity, and balanced animal nutrition.
+        </p>
+
+        <!-- Show only 4 ingredients as a preview -->
+        <div class="ingredients-grid preview-grid">
+            <div class="ingredient-card">
+                <h3>Maize Germ</h3>
+                <p>Excellent source of energy for livestock and poultry feed formulations. Supports growth and weight gain.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Wheat Bran</h3>
+                <p>Rich in fibre and energy, helping improve digestion and feed utilization in cattle, poultry, and pigs.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Soya Meal</h3>
+                <p>High-quality plant protein source containing essential amino acids for healthy growth and production.</p>
+            </div>
+
+            <div class="ingredient-card">
+                <h3>Fish Meal</h3>
+                <p>Premium protein source rich in amino acids, vitamins, and minerals for poultry, fish, and young animals.</p>
+            </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="view-all-container">
+            <a href="products.html#ingredients-section" class="btn btn-primary view-all-btn">
+                <i class="fa-solid fa-arrow-right"></i> View All Feed Ingredients
+            </a>
+            <p class="view-all-subtext">See our complete range of 8+ quality feed raw materials</p>
+        </div>
+
+      
+
+       
+    </div>
+</section>
+
+    <!-- Why Choose Us -->
+    <div class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-red">Why Choose ASHRITA?</h2>
+            <div class="benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon text-blue">✓</div>
+                    <div>
+                        <h3>Quality Products</h3>
+                        <p>All feeds and medicines are sourced from trusted suppliers and meet industry standards</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon text-blue">✓</div>
+                    <div>
+                        <h3>Fast Delivery</h3>
+                        <p>We deliver to your farm quickly and reliably across Kakamega and surrounding areas</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon text-red">✓</div>
+                    <div>
+                        <h3>Expert Advice</h3>
+                        <p>Our team provides professional guidance on feed selection and animal health</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon text-red">✓</div>
+                    <div>
+                        <h3>Competitive Prices</h3>
+                        <p>Best prices in the market without compromising on quality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- CTA -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>Ready to Order?</h2>
+            <p>Contact us today for the best prices and fast delivery</p>
+            <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
+        </div>
+    </div>
+    <section class="stats">
+    <div>
+        <h2>500+</h2>
+        <p>Farmers Served</p>
+    </div>
+
+    <div>
+        <h2>100+</h2>
+        <p>Products Available</p>
+    </div> 
+
+     <div>
+ <h2>100%</h2>
+        <p>Genuine Products </p>
+     </div> <div>
+         <h2>1000+</h2>
+        <p>Products Sold</p> </div>
+         <div><h2>24/7</h2>
+        <p>Customer Support</p>
+    </div>
+</section>
+
+<!-- Trusted Brands - Scrolling Logos -->
+<section class="brands">
+    <h2>Trusted Brands</h2>
+
+    <div class="brand-logos-wrapper">
+        <div class="brand-logos">
+            <!-- First Set -->
+            <img src="Screenshot_20260609-112154~2.png" alt="Brand 1">
+            <img src="Screenshot_20260609-112511~2.png" alt="Brand 2">
+            <img src="Screenshot_20260609-112345~2.png" alt="Brand 3">
+            <img src="Screenshot_20260610-122737~2.png" alt="Brand 4">
+            <img src="Screenshot_20260610-122619~2.png" alt="Brand 5">
+            <img src="Screenshot_20260610-122508~2.png" alt="Brand 6">
+            <img src="WhatsApp Image 2026-06-25 at 13.29.30.jpeg" alt="Brand 7">
+            <img src="WhatsApp Image 2026-06-25 at 13.29.30 (1).jpeg" alt="Brand 8">
+            
+            <!-- Duplicate Set (for seamless infinite scroll) -->
+            <img src="Screenshot_20260609-112154~2.png" alt="Brand 1">
+            <img src="Screenshot_20260609-112511~2.png" alt="Brand 2">
+            <img src="Screenshot_20260609-112345~2.png" alt="Brand 3">
+            <img src="Screenshot_20260610-122737~2.png" alt="Brand 4">
+            <img src="Screenshot_20260610-122619~2.png" alt="Brand 5">
+            <img src="Screenshot_20260610-122508~2.png" alt="Brand 6">
+              <img src="WhatsApp Image 2026-06-25 at 13.29.30.jpeg" alt="Brand 7">
+            <img src="WhatsApp Image 2026-06-25 at 13.29.30 (1).jpeg" alt="Brand 8">
+            
+        </div>
+    </div>
+    
+</section>
+    
+
+
+
+<section class="areas-served">
+    <div class="container">
+        <h2 class="section-title">Areas We Serve</h2>
+
+        <p class="section-subtitle">
+            We proudly serve farmers and businesses across
+            Western Kenya and surrounding regions.
+        </p>
+
+        <div class="areas-grid">
+            <span>📍 Mayoni</span>
+            <span>📍 Mumias</span>
+            <span>📍 Kakamega</span>
+            <span>📍 Bungoma</span>
+            <span>📍 Busia</span>
+            
+            <span>📍 Vihiga</span>
+            <span>📍 Butere</span>
+            <span>📍 Sabatia</span>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+     
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col about-company">
+                    <h4>ASHRITA FEEDS</h4>
+                    <img src="ASHRITA LOGO_110321.pdf.png" alt="ASHRITA Logo" class="footer-logo">
+                    <p>Welcome to ASHRITA, your trusted partner in animal agriculture. We provide premium quality animal feeds and agrovet medicines for all types of farms. </p>
+                </div>
+                <div class="footer-col quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</li>
+                        
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info">
+                    <h4>Contact Details</h4>
+                    <p>P.O Box 822 Mumias</p>
+                    <p>Kenya</p>
+                    <p>Email:<a href="mailto:ashritafarmsproductsandfeeds@gmail.com">ashritafarmsproductsandfeeds@gmail.com</a></p>
+                </div>
+                <div class="footer-col social-media">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/share/1Gu6M8iHZu/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@ashritalimited" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                  
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> ASHRITA FEEDS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Update active nav link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+    let currentSlide = 0;
+const totalSlides = 2;  // Change this if you add more photos
+const carouselContainer = document.getElementById('carouselContainer');
+const dots = document.querySelectorAll('.carousel-dot');
+let autoplayTimer;
+
+// Function: Go to a specific slide
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+    resetAutoplay();
+}
+
+// Function: Go to next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+    resetAutoplay();
+}
+
+// Function: Go to previous slide
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+    resetAutoplay();
+}
+
+// Function: Update carousel position and highlight active dot
+function updateCarousel() {
+    const offset = -currentSlide * 100;
+    carouselContainer.style.transform = `translateX(${offset}%)`;
+
+    // Update dots to show which slide is active
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Function: Auto-advance slides every 5 seconds
+function startAutoplay() {
+    autoplayTimer = setInterval(() => {
+        nextSlide();
+    }, 5000);  // 5000 milliseconds = 5 seconds. Change to 3000 for 3 seconds
+}
+
+// Function: Reset autoplay timer (when user clicks)
+function resetAutoplay() {
+    clearInterval(autoplayTimer);
+    startAutoplay();
+}
+
+// Start autoplay when page loads
+startAutoplay();
+
+// Pause autoplay when mouse hovers over header
+document.querySelector('.hero').addEventListener('mouseenter', () => {
+    clearInterval(autoplayTimer);
+});
+
+// Resume autoplay when mouse leaves header
+document.querySelector('.hero').addEventListener('mouseleave', () => {
+    startAutoplay();
+});
+</script>
+<script>
+// Initialize cart and likes counts from localStorage
+function initializeSavedCounts() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initializeSavedCounts);
+
+// Check for cart/likes updates periodically
+setInterval(function() {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const likesCountEl = document.getElementById('likesCount');
+    if (cartCountEl) cartCountEl.textContent = cart.length;
+    if (likesCountEl) likesCountEl.textContent = likes.length;
+}, 500);
+
+
+</script>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
+       target="_blank" 
+       class="whatsapp-link" 
+       title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+</div>
+</body>
+</html>
