@@ -282,8 +282,52 @@ setInterval(function() {
     if (cartCountEl) cartCountEl.textContent = cart.length;
     if (likesCountEl) likesCountEl.textContent = likes.length;
 }, 500);
+
+// Open saved items (cart/likes)
+function openSavedList(type) {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const savedProducts = type === 'cart' ? cart : likes;
+    const title = type === 'cart' ? 'Cart Items' : 'Liked Products';
+    
+    document.getElementById('savedItemsTitle').textContent = title;
+    document.getElementById('savedItemsList').innerHTML = savedProducts.length ? savedProducts.map((item, index) => `
+        <div class="saved-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div>
+                <h3>${item.name}</h3>
+                <p>${item.sizeText}</p>
+                <strong>${item.price}</strong>
+            </div>
+            <button onclick="removeSavedItem('${type}', ${index})">Remove</button>
+        </div>
+    `).join('') : '<p class="empty-saved-message">No items here yet.</p>';
+    document.getElementById('savedItemsModal').classList.add('show');
+}
+
+function closeSavedList() {
+    document.getElementById('savedItemsModal').classList.remove('show');
+}
+
+function removeSavedItem(type, index) {
+    let items = JSON.parse(localStorage.getItem(type === 'cart' ? 'ashritaCart' : 'ashritaLikes') || '[]');
+    items.splice(index, 1);
+    localStorage.setItem(type === 'cart' ? 'ashritaCart' : 'ashritaLikes', JSON.stringify(items));
+    initializeSavedCounts();
+    openSavedList(type);
+}
     </script>
-    <div class="whatsapp-float">
+    <div id="savedItemsModal" class="modal">
+    <div class="modal-content saved-items-content">
+        <span class="modal-close" onclick="closeSavedList()">&times;</span>
+        <div class="modal-body">
+            <h2 id="savedItemsTitle">Saved Items</h2>
+            <div id="savedItemsList" class="saved-items-list"></div>
+        </div>
+    </div>
+</div>
+
+<div class="whatsapp-float">
     <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
        target="_blank" 
        class="whatsapp-link" 

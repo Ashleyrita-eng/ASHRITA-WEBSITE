@@ -386,6 +386,44 @@
             <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
         </div>
     </div>
+
+    <!-- Visit Us Section -->
+    <section class="visit-us-section">
+        <div class="container">
+            <h2 class="section-title text-red">Visit Us</h2>
+            <p class="section-subtitle">Come see our store and meet our team in person. We're located in the heart of Mayoni, Kakamega.</p>
+            
+            <div class="visit-us-content">
+                <div class="visit-info-card">
+                    <div class="visit-icon">📍</div>
+                    <h3>Location</h3>
+                    <p><strong>ASHRITA Feeds</strong></p>
+                    <p>Rubis Mayoni Junction</p>
+                    <p>Mayoni, Kakamega</p>
+                    <p>Kenya</p>
+                </div>
+
+                <div class="visit-info-card">
+                    <div class="visit-icon">⏰</div>
+                    <h3>Business Hours</h3>
+                    <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+
+                <div class="visit-info-card">
+                    <div class="visit-icon">📞</div>
+                    <h3>Contact</h3>
+                    <p><strong>Phone:</strong> +254 715 446 134</p>
+                    <p><strong>Email:</strong> ashritafarmsproductsandfeeds@gmail.com</p>
+                    <p><strong>WhatsApp:</strong> Available for orders</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
     <section class="stats">
     <div>
         <h2>500+</h2>
@@ -615,8 +653,52 @@ setInterval(function() {
     if (likesCountEl) likesCountEl.textContent = likes.length;
 }, 500);
 
+// Open saved items (cart/likes)
+function openSavedList(type) {
+    const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
+    const likes = JSON.parse(localStorage.getItem('ashritaLikes') || '[]');
+    const savedProducts = type === 'cart' ? cart : likes;
+    const title = type === 'cart' ? 'Cart Items' : 'Liked Products';
+    
+    document.getElementById('savedItemsTitle').textContent = title;
+    document.getElementById('savedItemsList').innerHTML = savedProducts.length ? savedProducts.map((item, index) => `
+        <div class="saved-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div>
+                <h3>${item.name}</h3>
+                <p>${item.sizeText}</p>
+                <strong>${item.price}</strong>
+            </div>
+            <button onclick="removeSavedItem('${type}', ${index})">Remove</button>
+        </div>
+    `).join('') : '<p class="empty-saved-message">No items here yet.</p>';
+    document.getElementById('savedItemsModal').classList.add('show');
+}
+
+function closeSavedList() {
+    document.getElementById('savedItemsModal').classList.remove('show');
+}
+
+function removeSavedItem(type, index) {
+    let items = JSON.parse(localStorage.getItem(type === 'cart' ? 'ashritaCart' : 'ashritaLikes') || '[]');
+    items.splice(index, 1);
+    localStorage.setItem(type === 'cart' ? 'ashritaCart' : 'ashritaLikes', JSON.stringify(items));
+    initializeSavedCounts();
+    openSavedList(type);
+}
+
 
 </script>
+
+<div id="savedItemsModal" class="modal">
+    <div class="modal-content saved-items-content">
+        <span class="modal-close" onclick="closeSavedList()">&times;</span>
+        <div class="modal-body">
+            <h2 id="savedItemsTitle">Saved Items</h2>
+            <div id="savedItemsList" class="saved-items-list"></div>
+        </div>
+    </div>
+</div>
 
 <div class="whatsapp-float">
     <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
