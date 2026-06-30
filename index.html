@@ -481,10 +481,25 @@
         </div>
     </footer>
 
-    <script>
-       
+   <script>
+// =============================================
+// CAROUSEL - FULLY WORKING
+// =============================================
+
+let currentSlide = 0;
+const totalSlides = 2;
+let autoplayTimer;
+
+// Get elements
+const carouselContainer = document.getElementById('carouselContainer');
+const dots = document.querySelectorAll('.carousel-dot');
+
 // Function: Go to a specific slide
 function goToSlide(index) {
+    // Make sure index is valid
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    
     currentSlide = index;
     updateCarousel();
     resetAutoplay();
@@ -492,28 +507,23 @@ function goToSlide(index) {
 
 // Function: Go to next slide
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-    resetAutoplay();
+    goToSlide(currentSlide + 1);
 }
 
 // Function: Go to previous slide
 function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-    resetAutoplay();
+    goToSlide(currentSlide - 1);
 }
 
 // Function: Update carousel position and highlight active dot
 function updateCarousel() {
+    if (!carouselContainer) return;
+    
     const offset = -currentSlide * 100;
-    carouselContainer.style.transform = `translateX(${offset}%)`;
-// Add this at the beginning of your carousel script
-document.addEventListener('DOMContentLoaded', function() {
-    // Your existing carousel code here
-});
-    // Update dots to show which slide is active
-    dots.forEach((dot, index) => {
+    carouselContainer.style.transform = 'translateX(' + offset + '%)';
+
+    // Update dots
+    dots.forEach(function(dot, index) {
         if (index === currentSlide) {
             dot.classList.add('active');
         } else {
@@ -524,9 +534,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function: Auto-advance slides every 5 seconds
 function startAutoplay() {
-    autoplayTimer = setInterval(() => {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+    autoplayTimer = setInterval(function() {
         nextSlide();
-    }, 5000);  // 5000 milliseconds = 5 seconds. Change to 3000 for 3 seconds
+    }, 5000);
 }
 
 // Function: Reset autoplay timer (when user clicks)
@@ -535,20 +546,41 @@ function resetAutoplay() {
     startAutoplay();
 }
 
-// Start autoplay when page loads
-startAutoplay();
-
-// Pause autoplay when mouse hovers over header
-document.querySelector('.hero').addEventListener('mouseenter', () => {
-    clearInterval(autoplayTimer);
-});
-
-// Resume autoplay when mouse leaves header
-document.querySelector('.hero').addEventListener('mouseleave', () => {
+// ===== START CAROUSEL =====
+// Wait for page to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Make sure first slide is active
+    goToSlide(0);
     startAutoplay();
 });
-</script>
-<script>
+
+// Pause autoplay when mouse hovers over hero
+const heroSection = document.querySelector('.hero');
+if (heroSection) {
+    heroSection.addEventListener('mouseenter', function() {
+        clearInterval(autoplayTimer);
+    });
+
+    heroSection.addEventListener('mouseleave', function() {
+        startAutoplay();
+    });
+}
+
+// For mobile touch
+if (heroSection) {
+    heroSection.addEventListener('touchstart', function() {
+        clearInterval(autoplayTimer);
+    });
+    
+    heroSection.addEventListener('touchend', function() {
+        startAutoplay();
+    });
+}
+
+// =============================================
+// CART & LIKES
+// =============================================
+
 // Initialize cart and likes counts from localStorage
 function initializeSavedCounts() {
     const cart = JSON.parse(localStorage.getItem('ashritaCart') || '[]');
@@ -605,7 +637,11 @@ function removeSavedItem(type, index) {
     initializeSavedCounts();
     openSavedList(type);
 }
-// Mobile Menu Toggle - WORKS
+
+// =============================================
+// MOBILE MENU TOGGLE
+// =============================================
+
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     const navCenter = document.querySelector('.nav-center');
@@ -632,7 +668,6 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-
 </script>
 
 <div id="savedItemsModal" class="modal">
