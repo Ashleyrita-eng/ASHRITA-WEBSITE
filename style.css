@@ -4735,8 +4735,9 @@ nav {
         width: 32px !important;
         height: 32px !important;
         font-size: 0.75rem !important;
-
-
+    
+    }
+}
 /* ================================================
    COMPLETE FIX - Header, Nav, Brands, Call Us
    ================================================ */
@@ -5056,3 +5057,441 @@ img[src*="Screenshot"]:hover {
     }
 }
 
+/* ================================================
+   MOBILE HEADER - COMPLETE FIX
+   ================================================ */
+
+@media (max-width: 768px) {
+    /* Force header layout */
+    .nav-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0.5rem 0.8rem !important;
+        gap: 0.3rem !important;
+        flex-wrap: nowrap !important;
+        min-height: 56px !important;
+        width: 100% !important;
+    }
+
+    /* LEFT: Cart & Likes */
+    .nav-left {
+        order: 1 !important;
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+    }
+
+    .header-actions {
+        display: flex !important;
+        gap: 0.2rem !important;
+    }
+
+    .header-action-btn {
+        width: 36px !important;
+        height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.3rem !important;
+        font-size: 0.8rem !important;
+        border-radius: 50% !important;
+        border: 1px solid #ddd !important;
+        background: white !important;
+        position: relative !important;
+    }
+
+    .header-action-btn span:not(.action-count) {
+        display: none !important;
+    }
+
+    .action-count {
+        position: absolute !important;
+        top: -6px !important;
+        right: -6px !important;
+        width: 18px !important;
+        height: 18px !important;
+        font-size: 0.6rem !important;
+        min-width: 18px !important;
+        border-radius: 50% !important;
+        background: #DC143C !important;
+        color: white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* CENTER: LOGO */
+    .logo {
+        order: 2 !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .logo img {
+        width: 70px !important;
+        height: auto !important;
+        max-height: 40px !important;
+        object-fit: contain !important;
+    }
+
+    /* RIGHT: Call Us + Social + Menu */
+    .nav-right {
+        order: 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.3rem !important;
+        flex: 0 0 auto !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* SHOW CALL US BUTTON */
+    .phone-number {
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    .phone-number a {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.35rem 0.6rem !important;
+        background: #0088CC !important;
+        color: white !important;
+        border-radius: 6px !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        font-size: 0.65rem !important;
+        white-space: nowrap !important;
+        transition: all 0.2s !important;
+        min-height: 32px !important;
+    }
+
+    .phone-number a:hover {
+        background: #006699 !important;
+    }
+
+    /* Social Icons */
+    .header-social-wrapper {
+        display: flex !important;
+        gap: 0.2rem !important;
+        border-left: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .header-social-label {
+        display: none !important;
+    }
+
+    .header-social {
+        display: flex !important;
+        gap: 0.2rem !important;
+    }
+
+    .header-social a {
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 1.5px solid #0088CC !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        color: #0088CC !important;
+        font-size: 0.7rem !important;
+        transition: all 0.3s !important;
+        text-decoration: none !important;
+    }
+
+    .header-social a:hover {
+        background: #0088CC !important;
+        color: white !important;
+        transform: scale(1.05);
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        border: 2px solid #0088CC !important;
+        border-radius: 6px !important;
+        background: transparent !important;
+        color: #0088CC !important;
+        cursor: pointer !important;
+        transition: all 0.3s !important;
+    }
+
+    .menu-toggle:hover {
+        background: #0088CC !important;
+        color: white !important;
+    }
+
+    /* HIDE DESKTOP NAV */
+    .nav-center {
+        display: none !important;
+    }
+}
+
+/* ================================================
+   MOBILE NAVIGATION MENU - WORKING POPUP
+   ================================================ */
+
+@media (max-width: 768px) {
+    .nav-center {
+        display: block !important;
+        position: fixed !important;
+        top: 56px !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: calc(100vh - 56px) !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        border-top: 3px solid #0088CC !important;
+        box-shadow: -8px 0 30px rgba(0,0,0,0.15) !important;
+        transition: right 0.35s ease !important;
+        z-index: 9999 !important;
+        overflow-y: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .nav-center.active {
+        right: 0 !important;
+        display: block !important;
+    }
+
+    .nav-center .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        background: white !important;
+        width: 100% !important;
+        border-top: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: static !important;
+        right: auto !important;
+        height: auto !important;
+        transition: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    .nav-links li {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none !important;
+    }
+
+    .nav-links a {
+        display: block !important;
+        padding: 1rem 1.5rem !important;
+        color: #333 !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+        font-size: 0.95rem !important;
+        transition: all 0.2s !important;
+        background: white !important;
+        border-bottom: none !important;
+        border-left: 4px solid transparent !important;
+    }
+
+    .nav-links a:hover {
+        background: #f5f7fa !important;
+        border-left: 4px solid #0088CC !important;
+        padding-left: calc(1.5rem - 4px) !important;
+    }
+
+    .nav-links a.active {
+        background: #f0f4f8 !important;
+        color: #DC143C !important;
+        border-left: 4px solid #DC143C !important;
+        padding-left: calc(1.5rem - 4px) !important;
+    }
+}
+
+/* ================================================
+   OVERLAY FOR MENU
+   ================================================ */
+
+@media (max-width: 768px) {
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 9998;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/* ================================================
+   TRUSTED BRANDS - FORCE WHITE BACKGROUND
+   ================================================ */
+
+.brands {
+    background-color: #ffffff !important;
+}
+
+.brands::before,
+.brands::after {
+    background: linear-gradient(to right, #ffffff, transparent) !important;
+}
+
+.brands::after {
+    background: linear-gradient(to left, #ffffff, transparent) !important;
+}
+
+.brand-logos img {
+    filter: brightness(0.9) !important;
+    opacity: 0.85 !important;
+    transition: all 0.4s ease !important;
+}
+
+.brand-logos img:hover {
+    filter: brightness(2) saturate(1.2) !important;
+    opacity: 1 !important;
+}
+
+/* ================================================
+   FOOTER - BETTER MOBILE ARRANGEMENT
+   ================================================ */
+
+@media (max-width: 768px) {
+    .main-footer .footer-columns {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+        padding: 0 0.8rem !important;
+    }
+
+    .main-footer .footer-col {
+        flex: unset !important;
+        min-width: unset !important;
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+    }
+
+    .main-footer .footer-col.about-company {
+        grid-column: 1 / -1 !important;
+        text-align: center !important;
+    }
+
+    .main-footer .footer-col.about-company p {
+        text-align: center !important;
+    }
+
+    .footer-logo {
+        margin: 0 auto 0.5rem !important;
+    }
+
+    .main-footer .footer-col h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.6rem !important;
+        text-align: center !important;
+    }
+
+    .main-footer .footer-col ul {
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .main-footer .footer-col ul li {
+        margin-bottom: 0.4rem !important;
+    }
+
+    .main-footer .footer-col ul li a {
+        font-size: 0.8rem !important;
+    }
+
+    .main-footer .footer-col p {
+        font-size: 0.8rem !important;
+        text-align: center !important;
+        line-height: 1.6 !important;
+    }
+
+    .main-footer .social-media {
+        text-align: center !important;
+        grid-column: 1 / -1 !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .main-footer .social-media a {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+        margin: 0 4px !important;
+    }
+
+    .main-footer .copyright {
+        font-size: 0.7rem !important;
+        padding-top: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .main-footer .contact-info p {
+        text-align: center !important;
+    }
+
+    .main-footer .contact-info a {
+        display: inline-block !important;
+        word-break: break-all !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+        padding: 0 0.5rem !important;
+    }
+
+    .main-footer .footer-col {
+        text-align: center !important;
+    }
+
+    .main-footer .footer-col.about-company {
+        grid-column: 1 !important;
+    }
+
+    .main-footer .social-media {
+        grid-column: 1 !important;
+    }
+
+    .footer-logo {
+        margin: 0 auto 0.5rem !important;
+    }
+}
