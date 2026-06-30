@@ -531,28 +531,7 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Update active nav link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    </script>
-    <script>
-    let currentSlide = 0;
-const totalSlides = 2;  // Change this if you add more photos
-const carouselContainer = document.getElementById('carouselContainer');
-const dots = document.querySelectorAll('.carousel-dot');
-let autoplayTimer;
-
+       
 // Function: Go to a specific slide
 function goToSlide(index) {
     currentSlide = index;
@@ -672,7 +651,33 @@ function removeSavedItem(type, index) {
     initializeSavedCounts();
     openSavedList(type);
 }
+// Mobile Menu Toggle - WORKS
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const navCenter = document.querySelector('.nav-center');
+    
+    if (navCenter) {
+        navCenter.classList.toggle('active');
+    }
+    
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+}
 
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navCenter = document.querySelector('.nav-center');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (navCenter && navCenter.classList.contains('active')) {
+        if (!navCenter.contains(event.target) && !menuToggle?.contains(event.target)) {
+            navCenter.classList.remove('active');
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.remove('active');
+        }
+    }
+});
 
 </script>
 

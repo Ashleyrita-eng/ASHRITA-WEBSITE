@@ -1616,10 +1616,33 @@
     </footer>
     <script>
         // Mobile Menu Toggle
-        function toggleMenu() {
+      // Mobile Menu Toggle - WORKS
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const navCenter = document.querySelector('.nav-center');
+    
+    if (navCenter) {
+        navCenter.classList.toggle('active');
+    }
+    
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navCenter = document.querySelector('.nav-center');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (navCenter && navCenter.classList.contains('active')) {
+        if (!navCenter.contains(event.target) && !menuToggle?.contains(event.target)) {
+            navCenter.classList.remove('active');
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            if (navLinks) navLinks.classList.remove('active');
         }
+    }
+});
 
         // Update active nav link
         document.querySelectorAll('.nav-links a').forEach(link => {
