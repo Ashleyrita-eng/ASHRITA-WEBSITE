@@ -508,7 +508,10 @@ function prevSlide() {
 function updateCarousel() {
     const offset = -currentSlide * 100;
     carouselContainer.style.transform = `translateX(${offset}%)`;
-
+// Add this at the beginning of your carousel script
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing carousel code here
+});
     // Update dots to show which slide is active
     dots.forEach((dot, index) => {
         if (index === currentSlide) {
