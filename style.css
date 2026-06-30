@@ -264,6 +264,27 @@ nav {
     .phone-number {
         display: none;
     }
+
+    .header-social-wrapper {
+        display: flex !important;
+        border-left: none;
+        padding-left: 0;
+        gap: 0.5rem;
+    }
+
+    .header-social-label {
+        display: none;
+    }
+
+    .header-social {
+        gap: 0.4rem;
+    }
+
+    .header-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Hero Section */
