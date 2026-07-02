@@ -2439,7 +2439,7 @@ nav {
 }
 .product-image {
     width: 100% !important;
-    height: 220px !important;      /* Desktop: increased from 120px */
+    height: 240px !important;      /* Desktop: slightly enlarged */
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -2448,14 +2448,14 @@ nav {
 /* Mobile adjustments for product images */
 @media (max-width: 768px) {
     .product-image {
-        height: 180px !important;   /* Tablet */
+        height: 200px !important;   /* Tablet */
     }
 }
 
 /* Extra small screens */
 @media (max-width: 480px) {
     .product-image {
-        height: 160px !important;   /* Mobile phones */
+        height: 180px !important;   /* Mobile phones */
     }
 }
 
