@@ -32,7 +32,25 @@
             <div class="nav-center">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li class="nav-dropdown">
+    <a href="products.html">Products ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="products.html#seeds">Seeds</a></li>
+        <li><a href="products.html#vitamins">Vitamins &amp; Supplements</a></li>
+        <li><a href="products.html#feeds">Animal Feeds</a></li>
+        <li><a href="products.html#fish">Fish Feeds</a></li>
+        <li><a href="products.html#insecticides">Insecticides</a></li>
+        <li><a href="products.html#herbicides">Herbicides</a></li>
+        <li><a href="products.html#antibiotics">Antibiotics &amp; Medicines</a></li>
+        <li><a href="products.html#salt">Animal Salt &amp; Minerals</a></li>
+        <li><a href="products.html#specialty">Specialty Feeds</a></li>
+        <li><a href="products.html#cereals">Cereals &amp; Grains</a></li>
+        <li><a href="products.html#fertilizers">Fertilizers</a></li>
+        <li><a href="products.html#milking">Milking Salve</a></li>
+        <li><a href="products.html#feeders">Feeders</a></li>
+        <li><a href="products.html#drinkers">Drinkers</a></li>
+    </ul>
+</li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
@@ -338,6 +356,25 @@ function removeSavedItem(type, index) {
     initializeSavedCounts();
     openSavedList(type);
 }
+// Products dropdown: mobile click-to-open
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (!dropdown) return;
+    const trigger = dropdown.querySelector('a');
+    trigger.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (!dropdown.classList.contains('open')) {
+                e.preventDefault();
+                dropdown.classList.add('open');
+            }
+        }
+    });
+    document.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+        }
+    });
+});
     </script>
     <div id="savedItemsModal" class="modal">
     <div class="modal-content saved-items-content">

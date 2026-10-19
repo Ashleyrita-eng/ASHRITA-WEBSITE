@@ -32,7 +32,25 @@
             <div class="nav-center">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html" class="active">Products</a></li>
+                    <li class="nav-dropdown">
+    <a href="products.html" class="active">Products ▾</a>
+    <ul class="dropdown-menu">
+        <li><a href="products.html#seeds">Seeds</a></li>
+        <li><a href="products.html#vitamins">Vitamins &amp; Supplements</a></li>
+        <li><a href="products.html#feeds">Animal Feeds</a></li>
+        <li><a href="products.html#fish">Fish Feeds</a></li>
+        <li><a href="products.html#insecticides">Insecticides</a></li>
+        <li><a href="products.html#herbicides">Herbicides</a></li>
+        <li><a href="products.html#antibiotics">Antibiotics &amp; Medicines</a></li>
+        <li><a href="products.html#salt">Animal Salt &amp; Minerals</a></li>
+        <li><a href="products.html#specialty">Specialty Feeds</a></li>
+        <li><a href="products.html#cereals">Cereals &amp; Grains</a></li>
+        <li><a href="products.html#fertilizers">Fertilizers</a></li>
+        <li><a href="products.html#milking">Milking Salve</a></li>
+        <li><a href="products.html#feeders">Feeders</a></li>
+        <li><a href="products.html#drinkers">Drinkers</a></li>
+    </ul>
+</li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -96,7 +114,7 @@
         <!-- Product Search Section -->
        
         <!-- SEEDS CATEGORY -->
-        <h2 class="category-title blue">SEEDS</h2>
+        <h2 class="category-title blue" id="seeds">SEEDS</h2>
         <div class="grid" id="seedsGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Hybrid H513', '700', 'Available', 'In Stock', '2kg')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -255,7 +273,7 @@
         </div>
 
         <!-- VITAMINS & SUPPLEMENTS CATEGORY -->
-        <h2 class="category-title red">VITAMINS & SUPPLEMENTS</h2>
+       <h2 class="category-title red" id="vitamins">VITAMINS & SUPPLEMENTS</h2>
         <div class="grid" id="vitaminsGrid">
             <div class="product-card red-border" onclick="showProductDetail('Cosvita', '120', 'Available', 'In Stock', '30g')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -401,7 +419,7 @@
         
          
         <!-- ANIMAL FEEDS CATEGORY -->
-        <h2 class="category-title blue">ANIMAL FEEDS</h2>
+       <h2 class="category-title blue" id="feeds">ANIMAL FEEDS</h2>
         <div class="grid" id="feedsGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Growers', '3400', 'Available', 'In Stock', '50kgs per bag')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -506,7 +524,7 @@
         </div>
 
         <!-- FISH FEEDS CATEGORY -->
-        <h2 class="category-title red">FISH FEEDS</h2>
+       <h2 class="category-title red" id="fish">FISH FEEDS</h2>
         <div class="grid" id="fishGrid">
             <div class="product-card red-border" onclick="showProductDetail('Tilapia Starter', '4500', 'Available', 'In Stock', '25kgs')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -554,7 +572,7 @@
         </div>
 
         <!-- INSECTICIDES CATEGORY -->
-        <h2 class="category-title blue">INSECTICIDES</h2>
+         <h2 class="category-title blue" id="insecticides">INSECTICIDES</h2>
         <div class="grid" id="insecticidesGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Tixfix (20ml)', '100', 'Available', 'In Stock', '20ml')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -798,7 +816,7 @@
        
 
         <!-- HERBICIDES CATEGORY -->
-        <h2 class="category-title blue">HERBICIDES</h2>
+        <h2 class="category-title blue" id="herbicides">HERBICIDES</h2>
         <div class="grid" id="herbicidesGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Kausha', '200', 'Available', 'In Stock', '200ml')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -831,7 +849,7 @@
         </div>
 
         <!-- ANTIBIOTICS & MEDICINES CATEGORY -->
-        <h2 class="category-title red">ANTIBIOTICS & MEDICINES</h2>
+        <h2 class="category-title red" id="antibiotics">ANTIBIOTICS & MEDICINES</h2>
         <div class="grid" id="antibioticsGrid">
             <div class="product-card red-border" onclick="showProductDetail('Vitamin Neoxy (25g)', '150', 'Available', 'In Stock', '25g')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1044,7 +1062,7 @@
         </div>
 
         <!-- ANIMAL SALT & MINERALS CATEGORY -->
-        <h2 class="category-title blue">ANIMAL SALT & MINERALS</h2>
+        <h2 class="category-title blue" id="salt">ANIMAL SALT & MINERALS</h2>
         <div class="grid" id="saltGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Maclik super', '300', 'Available', 'In Stock', '1kg')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1089,7 +1107,7 @@
             </div>
         </div>
         <!-- SPECIALTY FEEDS CATEGORY -->
-        <h2 class="category-title red">SPECIALTY FEEDS</h2>
+        <h2 class="category-title red" id="specialty">SPECIALTY FEEDS</h2>
         <div class="grid" id="specialtyGrid">
 
             <div class="product-card red-border" onclick="showProductDetail('Mola plus (Milk Booster)', '900', 'Available', 'In Stock', '5kgs')">
@@ -1122,7 +1140,7 @@
         </div>
 
         <!-- CEREALS & GRAINS CATEGORY -->
-        <h2 class="category-title blue">CEREALS & GRAINS</h2>
+        <h2 class="category-title blue" id="cereals">CEREALS & GRAINS</h2>
         <div class="grid" id="cerealsGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Pishori Rice', '190', 'Available', 'In Stock', '41kgs')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1169,7 +1187,7 @@
         </div>
 
         <!-- FERTILIZERS CATEGORY -->
-        <h2 class="category-title red">FERTILIZERS</h2>
+        <h2 class="category-title red" id="fertilizers">FERTILIZERS</h2>
         <div class="grid" id="fertilizersGrid">
             <div class="product-card red-border" onclick="showProductDetail('Urea', '250', 'Available', 'In Stock', '50kg')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1258,7 +1276,7 @@
         </div>
 
         <!-- MILKING SALVE CATEGORY -->
-        <h2 class="category-title red">MILKING SALVE</h2>
+        <h2 class="category-title red" id="milkingSalve">MILKING SALVE</h2>
         <div class="grid" id="milkingSalveGrid">
             <div class="product-card red-border" onclick="showProductDetail('Milking Salve (50gm)', '100', 'Available', 'In Stock', '50gm')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1334,7 +1352,7 @@
         </div>
         
         <!-- FEEDERS CATEGORY -->
-        <h2 class="category-title blue">FEEDERS</h2>
+        <h2 class="category-title blue" id="feeders">FEEDERS</h2>
         <div class="grid" id="feedersGrid">
             <div class="product-card blue-border" onclick="showProductDetail('Feeders (3Litres)', '350', 'Available', 'In Stock', '3Litres')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -1381,7 +1399,7 @@
         </div>
 
         <!-- DRINKERS CATEGORY -->
-        <h2 class="category-title red">DRINKERS</h2>
+        <h2 class="category-title red" id="drinkers">DRINKERS</h2>
         <div class="grid" id="drinkersGrid">
             <div class="product-card red-border" onclick="showProductDetail('Drinkers (3Litres)', '350', 'Available', 'In Stock', '3Litres')">
                 <div class="product-stock-badge in-stock">In Stock</div>
@@ -2070,6 +2088,25 @@ function searchProducts() {
         resultsCount.textContent = totalMatches;
     }
 }
+// Products dropdown: mobile click-to-open
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (!dropdown) return;
+    const trigger = dropdown.querySelector('a');
+    trigger.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (!dropdown.classList.contains('open')) {
+                e.preventDefault();
+                dropdown.classList.add('open');
+            }
+        }
+    });
+    document.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+        }
+    });
+});
     </script>
     <div class="whatsapp-float">
     <a href="https://wa.me/254715446134?text=Hello%20ASHRITA,%20I%20would%20like%20to%20inquire%20about%20your%20products" 
